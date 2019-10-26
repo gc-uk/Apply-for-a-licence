@@ -1,0 +1,131 @@
+{% extends "layout-idauth.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Document details</h1>
+
+    <form method="POST">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="docs">
+          Document type
+        </label>
+        <select class="govuk-select autocomplete" id="docs" name="docs">
+          <option value="null"></option>
+          <option value="(Group 1) Adoption certificate (UK and Channel Islands)">(Group 1) Adoption certificate (UK and Channel Islands)</option>
+          <option value="(Group 1) Birth certificate (UK and Channel Islands)">(Group 1) Birth certificate (UK and Channel Islands)</option>
+          <option value="(Group 1) Driving licence (full or provisional)">(Group 1) Driving licence (full or provisional)</option>
+          <option value="(Group 1) EU National Identity card">(Group 1) EU National Identity card</option>
+          <option value="(Group 1) Firearms licence (UK)">(Group 1) Firearms licence (UK)</option>
+          <option value="(Group 1) HM forces ID Card (UK)">(Group 1) HM forces ID Card (UK)</option>
+          <option value="(Group 1) Identity Card for Foreign Nationals (ICFN) / Biometric residence permit">(Group 1) Identity Card for Foreign Nationals (ICFN) / Biometric residence permit</option>
+          <option value="(Group 1) Passport">(Group 1) Passport</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+          <label class="govuk-label" for="reference">
+            Document reference
+          </label>
+          <span class="govuk-hint">For example, passport number, licence number or account number</span>
+          <input class="govuk-input govuk-!-width-one-half" id="reference" name="reference" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="issue-hint">
+              <legend class="govuk-fieldset__legend">
+                Date of issue
+              </legend>
+              <span id="issue-issued-hint" class="govuk-hint">
+                For example, {{date | date("subtract", 2, "year") |date('DD MM YYYY')}}
+              </span>
+              <div class="govuk-date-input" id="issue-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="issue-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="issue-issued-day" name="issue-issued-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="issue-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="issue-issued-month" name="issue-issued-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="issue-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="issue-issued-year" name="issue-issued-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="expiry-hint">
+                <legend class="govuk-fieldset__legend">
+                  Date of expiry
+                </legend>
+                <span id="expiry-hint" class="govuk-hint">
+                  For example, {{date | date("add", 3, "year") |date('DD MM YYYY')}}
+                </span>
+                <div class="govuk-date-input" id="expiry">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="expiry-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-day" name="expiry-day" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="expiry-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expiry-month" name="expiry-month" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="expiry-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expiry-year" name="expiry-year" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button" type="submit">
+              Save and continue
+            </button>
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

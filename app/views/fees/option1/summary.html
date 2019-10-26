@@ -1,0 +1,210 @@
+{% extends "layout-fees.html" %}
+
+{% block pageTitle %}
+Calculate Gross Gambling Yield
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Gambling licence fee calculation</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+ 
+            {% include "../partials/_registerlicence.html" %}
+
+        
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+            {% include "../partials/_appFeeBlue.html" %}
+
+            {% include "../partials/_firstAnnual.html" %}
+
+            {% include "../partials/_annual.html" %}       
+    </div>
+
+</div>
+
+<div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-!-margin-bottom-3 govuk-!-margin-top-0 govuk-section-break--visible">
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+
+
+        <!-- <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Betting Intermediary
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    A1
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £178.00
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+           
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Gaming machine technical: full
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    D1
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £14,647.00
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Ancillary activities</h2>
+
+        <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Gaming machine technical: full
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    Ancillary
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £100.00
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+                
+            </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Remote activities</h2>
+
+        <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Gambling software
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    H1
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £14,647.00
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Betting Host (Virtual events)
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    K1
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £785.00
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Game Host (Bingo)
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    K1
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £785.00
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Game Host (Casino)
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    K1
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £25,374.00
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Personal licences</h2>
+
+        <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key govuk-!-width-two-thirds">
+                    Personal management licences<br>
+                    <span class="govuk-body-s">£370 each</span>
+                </dt>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    77
+                </dd>
+                <dd class="govuk-summary-list__value govuk-!-width-one-quarter">
+                    £28,490
+                </dd>
+                <dd class="govuk-summary-list__actions govuk-!-width-one-quarter">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> name</span>
+                    </a>
+                </dd>
+            </div>
+        </dl> -->
+
+
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "layout-id.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Sign in</h1>
+        <p class="govuk-body">Use your existing Gambling Commission eServices account to sign in to this service.</p>
+
+        <form>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="email">
+                    Email address
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="password">
+                    Password
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="password" name="password" type="password">
+            </div>
+
+            <a class="govuk-button" data-module="govuk-button" href="/idverification/v1/search">
+                Sign in
+            </a>
+
+        </form>
+
+        <h2 class="govuk-heading-m">Problems signing in</h2>
+
+        <ul class="govuk-list">
+            <li><a href="govuk-link">Forgot password</a></li>
+            <li><a href="govuk-link">I don't have an eServices sign in</a></li>
+        </ul>
+
+    </div>
+</div>
+
+
+{% endblock %}

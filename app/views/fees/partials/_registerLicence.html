@@ -1,0 +1,47 @@
+<h2 class="govuk-heading-m">Application fees</h2>
+
+{% for i in feeCalc.licenses %}
+<div class="govuk-inset-text govuk-!-margin-top-0" style="padding-top:1px;">
+    <div class="gc-search-result gc-search-result--header  govuk-!-margin-bottom-0">
+        <p class="govuk-heading-m govuk-!-margin-bottom-2">
+            {{i.licenceType}} licence</p>
+        <p class="govuk-!-margin-bottom-2 govuk-body-s">{{i.activities.length}}
+            {{ "activity" if i.activities.length === 1 else "activities" }} selected
+        </p>
+    </div>
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row govuk-body-s">
+                <th class="govuk-table__header" scope="col">Selected activities</th>
+                <th class="govuk-table__header" scope="col">
+                    {{ "Quantity" if i.licenceType === "Personal" else "Category" }}</th>
+                <th class="govuk-table__header" scope="col">
+                    Cost</th>
+                <th class="govuk-table__header" scope="col">
+                    Action </th>
+            </tr>
+        </thead>
+
+        <tbody class="govuk-table__body  govuk-body-s">
+            {% for activity in i.activities %}
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row">
+                    <a href="#" target="_Blank">{{ activity.activity }}</a>
+                </td>
+                <td class="govuk-table__cell">
+                    <div class="">
+                        {{ activity.quantity + " @ £" + (activity.cost | numeral('0,0.00')) if i.licenceType === "Personal" else activity.category }}
+                    </div>
+                </td>
+                <td class="govuk-table__cell">
+                    <div class="">£{{ activity.applicationFee | numeral('0,0.00') }}</div>
+                </td>
+                <td class="govuk-table__cell">
+                    <div class=""><a href="">Change</a></div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endfor %}

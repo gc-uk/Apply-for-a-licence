@@ -1,0 +1,137 @@
+{% extends "layout-ggy.html" %}
+
+{% block pageTitle %}
+Calculate Gross Gambling Yield
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Calculate gross gambling yield</h1>
+
+        <p class="govuk-body">Gross gambling yield (GGY) is calculated by taking the total of income from stakes and other gambling-related income and deducting any amount for prizes and winning payouts.</p>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        {% if err === false %}
+        <div class="gc-interruption-card govuk-!-margin-bottom-5">
+            <p class="govuk-heading-m">Your GGY calculation</p>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <p class="govuk-heading-l" id="ggy-calculation">&pound;{{total | numeral('0,0')}}</p>
+            <p class="govuk-body-s govuk-!-margin-bottom-0"><a href="/ggy-calculator/clear2">New calculation</a></p>
+        </div>
+        {% endif %}
+
+        {% if err === true %}
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+            data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+                There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                    {% if erramount1 %}
+                    <li>
+                        <a href="#amount1">Enter your income from stakes</a>
+                    </li>
+                    {% endif %}
+                    {% if erramount2 %}
+                    <li>
+                        <a href="#amount2">Enter your income from other sources</a>
+                    </li>
+                    {% endif %}
+                    {% if erramount3 %}
+                    <li>
+                        <a href="#amount3">Enter your amount of deductions</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+
+        <form method="POST">
+
+            <div class="govuk-form-group {% if erramount1 === true %}govuk-form-group--error{% endif %}">
+                <label class="govuk-label" for="amount1">
+                        Income from stakes
+                </label>
+                <span class="govuk-hint">You should include any stakes paid to you, in connection with the activities
+                        authorised by the licence</span>
+                {% if erramount1 === true %}
+                <span id="national-insurance-number-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> Enter your income from stakes
+                      </span>
+                      {% endif %}
+                <div id="amount-currency" class="govuk-visually-hidden">in pounds</div>
+                <div class="gc-currency-input">
+                    <div class="gc-currency-input__symbol" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-one-half {% if erramount1 === true %}govuk-input--error{% endif %}" id="amount1" name="amount1" type="text"
+                        aria-describedby="amount-currency " pattern="[0-9]*" value="{{data['amount1']}}">
+                </div>
+            </div>
+
+    
+
+                <div class="govuk-form-group {% if erramount2 === true %}govuk-form-group--error{% endif %}">
+                        <label class="govuk-label" for="amount2">
+                            Other income
+                        </label>
+                        <span class="govuk-hint">Total of any other amounts (exclusive of VAT) that you receive, in connection with the
+                                activities authorised by the licence</span>
+                        {% if erramount2 === true %}
+                        <span id="national-insurance-number-error" class="govuk-error-message">
+                                <span class="govuk-visually-hidden">Error:</span> Enter your income from other sources
+                              </span>
+                              {% endif %}
+                        <div id="amount-currency" class="govuk-visually-hidden">in pounds</div>
+                        <div class="gc-currency-input">
+                            <div class="gc-currency-input__symbol" aria-hidden="true">£</div>
+                            <input class="govuk-input govuk-!-width-one-half {% if erramount2 === true %}govuk-input--error{% endif %}" id="amount2" name="amount2" type="text"
+                                aria-describedby="amount-currency " pattern="[0-9]*" value="{{data['amount2']}}">
+                        </div>
+                    </div>
+           
+                <div class="govuk-form-group {% if erramount3 === true %}govuk-form-group--error{% endif %}">
+                        <label class="govuk-label" for="amount3">
+                                Deductions
+                        </label> <span class="govuk-hint">
+                Total of any amounts that will be deducted for prizes or winnings, in connection with the activities
+                authorised by the licence.</span>
+                        {% if erramount3 === true %}
+                        <span id="national-insurance-number-error" class="govuk-error-message">
+                                <span class="govuk-visually-hidden">Error:</span> Enter your deductions
+                              </span>
+                              {% endif %}
+                        <div id="amount-currency" class="govuk-visually-hidden">in pounds</div>
+                        <div class="gc-currency-input">
+                            <div class="gc-currency-input__symbol" aria-hidden="true">£</div>
+                            <input class="govuk-input govuk-!-width-one-half {% if erramount3 === true %}govuk-input--error{% endif %}" id="amount3" name="amount3" type="text"
+                                aria-describedby="amount-currency " pattern="[0-9]*" value="{{data['amount3']}}">
+                        </div>
+                    </div>
+            <button class="govuk-button" data-module="govuk-button" type="submit">
+                Calculate
+            </button>
+
+        </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+</div>
+
+
+{% endblock %}

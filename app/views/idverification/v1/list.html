@@ -1,0 +1,95 @@
+{% extends "layout-idauth.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Identity documents</h1>
+
+    <h2 class="govuk-heading-m">Identity documents that can be used for the checking process</h2>
+    <p class="govuk-body">Documents that we have divided into two groups: group 1 and group 2. </p>
+        <p class="govuk-body"> At least three
+          documents must be provided:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>if the individual can produce a document from group 1, three documents must be seen in total - one
+            document from group 1 plus any two from groups 1 or 2.</li>
+        <li>if the individual cannot produce a group 1 document, five documents from group 2 must be seen.</li>
+    </ul>
+
+    <p class="govuk-body"><a href="guidance">View the documents</a> that can be checked</p>
+
+  </div>
+  <div class="govuk-grid-column-full">
+
+    {% if items.length > 0 %}
+    <div class="govuk-inset-text">
+    <table class="govuk-table">
+        <caption class="govuk-table__caption"></caption>
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Document</th>
+                <th class="govuk-table__header" scope="col">Reference</th>
+                <th class="govuk-table__header" scope="col">Valid from</th>                        
+                <th class="govuk-table__header" scope="col">Valid to</th>                     
+                <th class="govuk-table__header" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+            {% for i in items %}
+
+        <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row">{{i.document}}</td>
+                <td class="govuk-table__cell">{{i.reference}}</td>
+                <td class="govuk-table__cell">{{i.issue | date('DD MMM YYYY')}}</td>
+                <td class="govuk-table__cell">{{i.expiry | date('DD MMM YYYY')}}</td>
+                
+                <td class="govuk-table__cell"><a href="/idverification/v1/remove/{{i.id}}">Remove</a></td>
+
+            </tr>
+            {% endfor %}
+
+
+        </tbody>
+    </table>
+
+    
+
+<p class="govuk-body"><a href="/idverification/v1/add">Add another document</a></p>
+</div>
+
+{% if items.length > 2 %}
+
+<button class="govuk-button" data-module="govuk-button" type="submit">
+  Save and continue
+</button>
+
+{% endif %}
+    
+
+{% else %}
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body">No documents have been provided</p>
+
+     <a href="/idverification/v1/add" class="govuk-link">Add documents</a>
+    </div>
+    {% endif %}
+
+
+  </div>
+</div>
+
+
+{% endblock %}

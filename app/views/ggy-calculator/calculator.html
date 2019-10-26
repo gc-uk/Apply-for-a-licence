@@ -1,0 +1,77 @@
+{% extends "layout-ggy.html" %}
+
+{% block pageTitle %}
+Calculate Gross Gambling Yield
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Calculate gross gambling yield</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+        <form method="POST">
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="amount1">
+                    Income from stakes
+                </label>
+                <div id="amount-currency" class="govuk-visually-hidden">in pounds</div>
+                <div class="gc-currency-input">
+                    <div class="gc-currency-input__symbol" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="amount1" name="amount1" type="text"
+                        aria-describedby="amount-currency " pattern="[0-9]*" value="{{data['amount1']}}">
+                </div>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="amount2">
+                    Gambling-related income
+                </label>
+                <div id="amount-currency" class="govuk-visually-hidden">in pounds</div>
+                <div class="gc-currency-input">
+                    <div class="gc-currency-input__symbol" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="amount2" name="amount2" type="text"
+                        aria-describedby="amount-currency " pattern="[0-9]*" value="{{data['amount2']}}">
+                </div>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="amount3">
+                    Amount deducted for prizes
+                </label>
+                <div id="amount-currency" class="govuk-visually-hidden">in pounds</div>
+                <div class="gc-currency-input">
+                    <div class="gc-currency-input__symbol" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="amount3" name="amount3" type="text"
+                        aria-describedby="amount-currency " pattern="[0-9]*" value="{{data['amount3']}}">
+                </div>
+            </div>
+            <button class="govuk-button" data-module="govuk-button" type="submit">
+                Calculate
+            </button>
+           
+        </form>
+
+    </div>
+    <div class="govuk-grid-column-one-half">
+        <div class="gc-interruption-card">
+            <h3 class="govuk-heading-s">GGY calculation</h3>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <p class="govuk-!-font-size-36" id="ggy-calculation">&pound;{{total | numeral('0,0')}}</p>
+    <p class="govuk-body-s govuk-!-margin-bottom-0"><a href="/ggy-calculator/clear">New calculation</a></p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

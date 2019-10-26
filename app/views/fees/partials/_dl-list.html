@@ -1,0 +1,23 @@
+{% for i in feeCalc.licenses %}
+<h2 class="govuk-heading-m"> {{i.licenceType}} licence</h2>
+<dl class="govuk-summary-list">
+    {% for activity in i.activities %}
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-two-thirds  govuk-body-s">
+            {{ activity.activity }}
+        </dt>
+        <dd class="govuk-summary-list__value govuk-!-width-one-quarter  govuk-body-s">
+            {{ activity.quantity + " @ £" + (activity.cost | numeral('0,0.00')) if i.licenceType === "Personal" else activity.category }}
+        </dd>
+        <dd class="govuk-summary-list__value govuk-!-width-one-quarter  govuk-body-s">
+            £{{ activity.applicationFee | numeral('0,0.00') }}
+        </dd>
+        <dd class="govuk-summary-list__actions govuk-!-width-one-quarter  govuk-body-s">
+            <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> {{ activity.activity }}</span>
+            </a>
+        </dd>
+    </div>
+    {% endfor %}
+</dl>
+{% endfor %}

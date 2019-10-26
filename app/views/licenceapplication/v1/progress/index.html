@@ -1,0 +1,90 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Application progress prototypes</h1>
+        <p class="govuk-body">These screens help users understand the history of their application and complete any
+            actions as a result of processing tasks.</p>
+        <h2 class="govuk-heading-m">This supports the following user needs:</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>understand what is happening with my application</li>
+            <li>reduce the effort involved in managing applications I've submitted for businesses</li>
+            <li>provide additional information when requested by the GC, easily</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Alpha testing</h2>
+
+        <p class="govuk-body">During <span class="govuk-tag">Alpha</span> user testing, the user will get one of the
+            pages randomly displayed to them.</p>
+        <p class="govuk-body">This multivariate testing will help us to determine which pattern performs best for the
+            user.</p>
+
+        <h2 class="govuk-heading-m">Prototypes</h2>
+
+
+        <table class="gc-table">
+            <thead class="gc-table__head">
+                <tr class="gc-table__row">
+                    <th class="gc-table__header" scope="col">
+                        Version
+                    </th>
+                    <th class="gc-table__header " scope="col">
+                        Features
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="gc-table__body">
+                <tr class="gc-table__row">
+                    <td class="gc-table__cell">
+                        <a href="version1">Version 1</a>
+                    </td>
+                    <td class="gc-table__cell">
+                        Timeline with no actions
+                    </td>
+                </tr>
+                <tr class="gc-table__row">
+                    <td class="gc-table__cell">
+                        <a href="version2">Version 2</a>
+                    </td>
+                    <td class="gc-table__cell">
+                        Timeline with user action needed
+                    </td>
+                </tr>
+                <tr class="gc-table__row">
+                    <td class="gc-table__cell">
+                        <a href="version3">Version 3</a>
+                    </td>
+                    <td class="gc-table__cell">
+                        List history with no actions
+                    </td>
+                </tr>
+
+                <tr class="gc-table__row">
+                    <td class="gc-table__cell">
+                        <a href="version4">Version 4</a>
+                    </td>
+                    <td class="gc-table__cell">
+                        List history with user action needed
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Enter the code we've sent you</h1>
+
+       
+
+        <form>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="email">
+                    Code
+                </label>
+                <span class="govuk-hint">For example, 638252</span>
+                <input class="govuk-input govuk-!-width-one-third" id="email" name="email" type="text">
+            </div>
+
+            <a class="govuk-button" data-module="govuk-button" href="/licenceapplication/v1/hub/index">
+                Confirm and continue
+            </a>
+
+          
+        </form>
+
+        <h2 class="govuk-heading-m">Not received a code?</h2>
+
+        <p class="govuk-body">Codes are sent immediately, at busy times it could take a couple of minutes to arrive.</p>
+        <p class="govuk-body">If you don't receive it after 5 minutes, <a href="signin">try again</a></p>
+        <p class="govuk-body">If you're still having problems, <a href="contactus">contact us</a></p>
+    </div>
+</div>
+
+
+{% endblock %}

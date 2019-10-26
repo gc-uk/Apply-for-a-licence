@@ -1,0 +1,15 @@
+.gc-section-panel--grey {
+    background: #f3f2f1;
+    display: block;
+    border: 1px solid #b1b4b6;
+}
+
+.gc-mobile-padding {
+    padding: 15px;
+}
+
+@media screen and (min-width:900px) {
+    .gc-mobile-padding {
+        padding: 0px;
+    }
+}

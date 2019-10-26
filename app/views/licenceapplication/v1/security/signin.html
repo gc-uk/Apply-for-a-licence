@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Sign in</h1>
+
+        <p class="govuk-body">Enter your email address and we'll send you a code which you'll need to enter on the next screen.</p>
+        <p class="govuk-body">If you have a mobile number registered registered on your account, we'll also send the same code to your mobile.</p>
+
+        <form>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="email">
+                    Email address
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
+            </div>
+
+            <a class="govuk-button" data-module="govuk-button" href="code">
+                Send code and continue
+            </a>
+
+            <p class="govuk-body">
+                <a class="govuk-link" href="createaccount">Create an account</a>
+            </p>
+        </form>
+
+        <h2 class="govuk-heading-m">Problems signing in</h2>
+
+        <p class="govuk-body">Not received your code?</p>
+
+    </div>
+</div>
+
+
+{% endblock %}

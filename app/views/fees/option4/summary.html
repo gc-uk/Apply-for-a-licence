@@ -1,0 +1,335 @@
+{% extends "layout-fees.html" %}
+
+{% block pageTitle %}
+Calculate Gross Gambling Yield
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Gambling licence fee calculation</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="gc-section-panel--grey govuk-!-padding-2">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+
+                    <div class="gc-interruption-card">
+                        <p class="govuk-body govuk-!-margin-bottom-1 gc-text-uppercase govuk-!-font-size-14">Application
+                            fee</p>
+                        <p class="govuk-!-font-size-36" id="ggy-calculation">
+                            &pound;{{feeCalc.fees.application[0].totalApplication | numeral('0,0.00')}}</p>
+                        <p class="govuk-body-s govuk-!-margin-bottom-3">You need to pay this when submitting your
+                            application</p>
+
+                        <a href="" class="govuk-button  govuk-!-margin-bottom-0">Start application</a>
+
+                    </div>
+
+                </div>
+                <div class="govuk-grid-column-one-half">
+
+                    <div class="gc-mobile-padding">
+
+                        <p
+                            class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1 gc-text-uppercase govuk-!-font-size-14">
+                            First annual
+                            fee</p>
+                        <p class="govuk-!-font-size-24  govuk-!-margin-bottom-2" id="ggy-calculation">
+                            &pound;{{feeCalc.fees.application[1].first[0].totalApplication | numeral('0,0.00')}}</p>
+                        <p class="govuk-body-s govuk-!-margin-bottom-3">Due 30 days from licence issue</p>
+
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                        <p class="govuk-body govuk-!-margin-bottom-0 gc-text-uppercase govuk-!-font-size-14">Annual fee
+                        </p>
+                        <p class="govuk-!-font-size-24  govuk-!-margin-bottom-2" id="ggy-calculation">
+                            &pound;{{feeCalc.fees.application[2].annual[0].totalApplication | numeral('0,0.00')}}</p>
+                        <p class="govuk-body-s govuk-!-margin-bottom-3">Due on the anniversary of licence issue</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-4">Application fee breakdown</h2>
+
+        <p class="">Fees are due on the submission of the licence application.</p>
+        <table class="govuk-table">
+
+            <caption class="govuk-table__caption">Licence activities</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row govuk-body-s">
+                    <th class="govuk-table__header  govuk-!-width-one-half" scope="col">Activity</th>
+                    <th class="govuk-table__header  govuk-!-width-one-quarter govuk-table__header--numeric" scope="col">
+                        Category</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter  govuk-table__header--numeric" scope="col">
+                        Cost</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body  govuk-body-s">
+                {% for activity in  feeCalc.allActivities %}
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="row">
+                        <span class="govuk-!-font-weight-bold"><a href="">{{ activity.activity }}</a></span><br>
+                        <span class="gc-text-uppercase govuk-!-font-size-14">{{ activity.type }}</span>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <div class="">
+                            {{ activity.quantity + " @ £" + (activity.cost | numeral('0,0.00')) if i.licenceType === "Personal" else activity.category }}
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <div class="">£{{ activity.applicationFee | numeral('0,0.00') }}</div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption">Personal licences</caption>
+
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row govuk-body-s">
+                    <th class="govuk-table__header govuk-!-width-one-half" scope="col">Type</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter govuk-table__header--numeric" scope="col">
+                        Quantity</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter  govuk-table__header--numeric" scope="col">
+                        Cost</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body  govuk-body-s">
+                {% for activity in feeCalc.licenses %}
+                {% if activity.licenceType === 'Personal' %}
+                {% for type in activity.activities %}
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="row">
+                        <span class="govuk-!-font-weight-bold"><a href="">{{ type.activity }}</a></span><br>
+
+                        <span class="gc-text-uppercase govuk-!-font-size-14">£{{type.cost | numeral('0,0.00')}}
+                            each</span>
+
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <div class="">
+                            {{ type.quantity }}
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{ type.applicationFee | numeral('0,0.00') }}
+                    </td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption">Application fee calculation</caption>
+
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row govuk-body-s">
+                    <th class="govuk-table__header  govuk-table__header--numeric" scope="col">Item</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter  govuk-table__header--numeric" scope="col">
+                        Cost</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body  govuk-body-s">
+
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        Total cost
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{feeCalc.fees.application[0].total | numeral('0,0.00')}}
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        Discount
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{feeCalc.fees.application[0].discount | numeral('0,0.00')}}
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        Personal licences
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{feeCalc.fees.application[0].personal | numeral('0,0.00')}}
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <span class="govuk-!-font-weight-bold">Total application fee</span>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <span
+                            class="govuk-!-font-weight-bold">£{{feeCalc.fees.application[0].totalApplication | numeral('0,0.00')}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-4">First annual fee breakdown</h2>
+
+        <table class="govuk-table">
+
+            <caption class="govuk-table__caption">Licence activities</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row govuk-body-s">
+                    <th class="govuk-table__header  govuk-!-width-one-half" scope="col">Activity</th>
+                    <th class="govuk-table__header  govuk-!-width-one-quarter  govuk-table__header--numeric"
+                        scope="col">Category</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter  govuk-table__header--numeric" scope="col">
+                        Cost</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body  govuk-body-s">
+                {% for activity in  feeCalc.allActivities %}
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" scope="row">
+                        <span class="govuk-!-font-weight-bold"><a href="">{{ activity.activity }}</a></span><br>
+                        <span class="gc-text-uppercase govuk-!-font-size-14">{{ activity.type }}</span>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <div class="">
+                            {{ activity.quantity + " @ £" + (activity.cost | numeral('0,0.00')) if i.licenceType === "Personal" else activity.category }}
+                        </div>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <div class="">£{{ activity.annualFee | numeral('0,0.00') }}</div>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-4">First annual fee calculation</h2>
+        <table class="govuk-table">
+
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row govuk-body-s">
+                    <th class="govuk-table__header  govuk-table__header--numeric" scope="col">Item</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter  govuk-table__header--numeric" scope="col">
+                        Cost</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body  govuk-body-s">
+
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        Total cost
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{feeCalc.fees.application[1].first[0].total | numeral('0,0.00')}}
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        Discount
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{feeCalc.fees.application[1].first[0].discount | numeral('0,0.00')}}
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <span class="govuk-!-font-weight-bold">Total first annual fee</span>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <span
+                            class="govuk-!-font-weight-bold">£{{feeCalc.fees.application[1].first[0].totalApplication | numeral('0,0.00')}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-4">Annual fee calculation</h2>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row govuk-body-s">
+                    <th class="govuk-table__header  govuk-table__header--numeric" scope="col">Item</th>
+                    <th class="govuk-table__header govuk-!-width-one-quarter  govuk-table__header--numeric" scope="col">
+                        Cost</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body  govuk-body-s">
+
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        Total cost
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{feeCalc.fees.application[2].annual[0].total | numeral('0,0.00')}}
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        Discount
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        £{{feeCalc.fees.application[2].annual[0].discount | numeral('0,0.00')}}
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <span class="govuk-!-font-weight-bold">Total annual fee</span>
+                    </td>
+                    <td class="govuk-table__cell  govuk-table__cell--numeric">
+                        <span
+                            class="govuk-!-font-weight-bold">£{{feeCalc.fees.application[2].annual[0].totalApplication | numeral('0,0.00')}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

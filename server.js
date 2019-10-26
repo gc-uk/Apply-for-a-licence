@@ -10,6 +10,9 @@ const sessionInCookie = require('client-sessions')
 const sessionInMemory = require('express-session')
 const cookieParser = require('cookie-parser')
 const markdown = require('nunjucks-markdown');
+const numeralFilter = require('nunjucks-numeral-filter');
+
+var dateFilter = require('nunjucks-date-filter');
 const marked = require('marked');
 
 // Run before other code to make sure variables from .env are available
@@ -106,6 +109,7 @@ var nunjucksAppEnv = nunjucks.configure(appViews, nunjucksConfig)
 
 // Add Nunjucks filters
 utils.addNunjucksFilters(nunjucksAppEnv)
+nunjucksAppEnv.addFilter('date', dateFilter);
 
 markdown.register(nunjucksAppEnv, marked);
 
@@ -131,6 +135,8 @@ if (useDocumentation) {
   var nunjucksDocumentationEnv = nunjucks.configure(documentationViews, nunjucksConfig)
   // Nunjucks filters
   utils.addNunjucksFilters(nunjucksDocumentationEnv)
+  
+
 
   // Set views engine
   documentationApp.set('view engine', 'html')
@@ -214,6 +220,9 @@ if (useCookieSessionStore === 'true') {
 if (useAutoStoreData === 'true') {
   app.use(utils.autoStoreData)
   utils.addCheckedFunction(nunjucksAppEnv)
+
+  nunjucksAppEnv.addFilter('numeral', numeralFilter);
+
   if (useDocumentation) {
     utils.addCheckedFunction(nunjucksDocumentationEnv)
   }

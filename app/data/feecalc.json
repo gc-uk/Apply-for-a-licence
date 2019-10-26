@@ -1,0 +1,86 @@
+{
+    "fees": {
+        "application": [{
+                "total": 5568.00,
+                "discount": -2470.50,
+                "personal": 740.00,
+                "totalApplication": 3837.50
+            },
+            {
+                "first": [{
+                    "total": 16078.00,
+                    "discount": -4134.06,
+                    "totalApplication": 11943.94
+                }]
+            },
+            {
+                "annual": [{
+                    "total": 16078.00,
+                    "discount": -803.90,
+                    "totalApplication": 15274.10
+                }]
+            }
+        ]
+    },
+    "allActivities": [{
+            "activity": "Bingo",
+            "category": "B1",
+            "applicationFee": 1464.00,
+            "annualFee": 3055.00,
+            "type": "Non-remote"
+        },
+        {
+            "activity": "Gaming machine general: adult gaming centre",
+            "category": "C1",
+            "applicationFee": 1464.00,
+            "annualFee": 10314.00,
+            "type": "Non-remote"
+        },
+        {
+            "activity": "RNG based games and betting products",
+            "category": "Bingo - F1",
+            "applicationFee": 2640.00,
+            "annualFee": 2709.00,
+            "type": "Remote"
+        }
+    ],
+    "licenses": [{
+            "licenceType": "Non-remote",
+            "activities": [{
+                    "activity": "Bingo",
+                    "category": "B1",
+                    "applicationFee": 1464.00,
+                    "annualFee": 3055.00
+                },
+                {
+                    "activity": "Gaming machine general: adult gaming centre",
+                    "category": "C1",
+                    "applicationFee": 1464.00,
+                    "annualFee": 10314.00
+
+                }
+            ]
+        },
+        {
+            "licenceType": "Remote",
+            "activities": [{
+                "activity": "RNG based games and betting products",
+                "category": "Bingo - F1",
+                "applicationFee": 2640.00,
+                "annualFee": 2709.00
+
+            }]
+        },
+        {
+            "licenceType": "Personal",
+            "activities": [{
+                "activity": "Personal Management",
+                "cost": 370.00,
+                "quantity": 2,
+                "applicationFee": 740.00,
+                "annualFee": 0
+
+            }]
+        }
+    ]
+}
