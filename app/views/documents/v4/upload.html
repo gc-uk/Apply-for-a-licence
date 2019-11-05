@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Upload letter of good standing from overseas bank</h1>
+
+        <h2 class="govuk-heading-m">Why we need this</h2>
+        <p class="govuk-body">We need this so that we can...</p>
+
+        <h2 class="govuk-heading-m">English translation</h2>
+        <p class="govuk-body">If your document is not in English, you will need to upload a certified, translated copy.
+        </p>
+
+        <h2 class="govuk-heading-m">Upload guidance</h2>
+        <p class="govuk-body">You can upload a file, scanned image or photo of this document.</p>
+        <p class="govuk-body">The file must be:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>clear and easy to read</li>
+            <li>be an image or document format, for example: jpg, docx or pdf</li>
+            <li>less than 10mb in size</li>
+        </ul>
+        <form></form>
+        <div class="govuk-inset-text">
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="file-upload-1">
+                    Upload a file
+                </label>
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+        </div>
+
+        </form>
+
+        <h2 class="govuk-heading-m">I can't provide this file</h2>
+        <p class="govuk-body"><a href="/documents/v4/nofile">Tell us why</a> you can't provide this file.</p>
+
+
+        <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+
+    </div>
+</div>
+
+
+{% endblock %}

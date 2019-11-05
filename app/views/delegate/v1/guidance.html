@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Let someone else access this application</h1>
+
+        <p class="govuk-body">You can let someone else access this application if you need help or multiple
+            people are required to provide information in the application.</p>
+
+        <h2 class="govuk-heading-m">They will be able to:</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>view and change information</li>
+            <li>delete information</li>
+            <li>view and download any files upload in this application</li>            
+            <li>view the progress of the application once submitted</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">They will not be able to:</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>delete the application completely</li>
+            <li>pay the application fee</li>
+            <li>submit this application</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Removing access</h2>
+
+        <p class="govuk-body">You can remove someones access at any time. Once removed you can invite them to access the application again if you need to.</p>
+
+        <h2 class="govuk-heading-m">Access to personal details</h2>
+
+        <p class="govuk-body">By letting someone else access this application, they will be able to see all personal
+            details that have been entered for any individuals listed in the application.</p>
+        <p class="govuk-body">You need to make any individuals listed in the application that you are giving access to
+            someone else.</p>
+
+            <h2 class="govuk-heading-m">Declaration</h2>
+
+        <p class="govuk-body">By continuing, you agree to the points listed and that you are responsible for assigning and revoking access to this access
+            to this application.</p>
+
+        <button class="govuk-button" data-module="govuk-button">
+            Continue
+        </button>
+
+    </div>
+</div>
+
+
+{% endblock %}

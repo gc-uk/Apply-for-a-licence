@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Letter of good standing from overseas bank</h1>
+
+        <h2 class="govuk-heading-m">Why we need this</h2>
+        <p class="govuk-body">We use this to assess your suitability to hold a licence. This includes assessing individuals against Anti-Money Laundering regulations or identifying financial problems which may put licensing objectives at risk. </p>
+
+        <h2 class="govuk-heading-m">English translation</h2>
+        <p class="govuk-body">If your document is not in English, you will also need to upload a copy which has been translated into English and certified by an official such as a solicitor.
+        </p>
+
+
+        <div class="govuk-inset-text">
+            <p class="govuk-body">Documents not provided.</p>
+
+            <p class="govuk-body govuk-!-margin-top-3">
+                <span class="govuk-!-font-weight-bold">Reason</span><br>This document can't be provided as I don't have
+                an overseas bank account.</p>
+
+           
+
+        </div>
+
+        <p class="govuk-body"><a href="/documents/v2/nofile">Edit</a> the reason for not providing this document.
+        </p>
+
+        <p class="govuk-body"><a href="/documents/v2/upload">Upload a document</a></p>
+
+        <a class="govuk-button" data-module="govuk-button" href="/documents/v2/">
+            Return to documents list
+        </a>
+
+    </div>
+</div>
+
+
+{% endblock %}

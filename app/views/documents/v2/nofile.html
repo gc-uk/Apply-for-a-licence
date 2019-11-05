@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Tell us why you can't provide a letter of good standing from overseas bank</h1>
+
+  
+       
+        <form>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="300">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="with-hint">
+                            Reason for not providing this document
+                          </label>
+                         
+                          <textarea class="govuk-textarea govuk-js-character-count " id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                        </div>
+                      
+                        <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                          You can enter up to 300 characters
+                        </span>
+                      </div>
+        </form>
+
+      
+
+        <a class="govuk-button" data-module="govuk-button" href="/documents/v2/index-no-upload">
+            Save and continue
+        </a>
+
+    </div>
+</div>
+
+
+{% endblock %}

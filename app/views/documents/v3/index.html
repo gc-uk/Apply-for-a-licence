@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Upload documents to support your application</h1>
+
+    <p class="govuk-body">We require copies of the following documents to be uploaded to support this application.</p>
+
+    <p class="govuk-body">Guidance is provided on the upload page for each document type.</p>
+
+
+    <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Document</th>
+            <th scope="col" class="govuk-table__header">Uploads</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Letter of good standing from overseas bank</th>
+            <td class="govuk-table__cell">No documents uploaded</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="">Upload</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Credit report</th>
+            <td class="govuk-table__cell">2 documents</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="">Upload and manage</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+  </div>
+</div>
+
+
+{% endblock %}

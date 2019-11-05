@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Upload documents to support your application</h1>
+
+    <p class="govuk-body">We require copies of the following documents to be uploaded to support this application.</p>
+
+    <p class="govuk-body">Guidance is provided on the upload page for each document type.</p>
+    <h2 class="govuk-heading-m">Documents</h2>
+
+    <div class="gc-documents-list">
+      <div class="gc-documents-list--group">
+        <div class="gc-documents-list--row">
+          <div class="gc-documents-list--doc-name">Letter of good standing from overseas bank</div>
+          <div class="gc-documents-list--doc-action"><a href="/documents/v4/upload">Upload</a></div>
+
+
+
+        </div>
+        <div class="gc-documents-list--doc-list">
+          <div class="gc-documents-list--doc-files">No documents uploaded</div>
+        </div>
+      </div>
+      <div class="gc-documents-list--group">
+        <div class="gc-documents-list--row">
+          <div class="gc-documents-list--doc-name">Credit report</div>
+          <div class="gc-documents-list--doc-action"><a href="/documents/v4/manage">Upload and manage</a></div>
+
+
+
+        </div>
+        <div class="gc-documents-list--doc-list">
+          <div class="gc-documents-list--doc-files">
+           2 documents uploaded
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+  </div>
+</div>
+
+
+{% endblock %}
