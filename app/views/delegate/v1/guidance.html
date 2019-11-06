@@ -4,21 +4,35 @@
 {% endblock %}
 
 {% block heroClass %}
+gc-header-hero
 {% endblock %}
 
 {% block heroContent %}
+
+<section class="govuk-!-padding-top-3 gc-hero gc-hero-grey">
+<div class="govuk-width-container">
+    <div class="govuk-grid-column-half">
+        Operator licence application | Reference: OL-76563
+    </div>
+</div>
+</section>
+
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Let someone else access this application</h1>
+        <h1 class="govuk-heading-l">Add a contributor</h1>
 
-        <p class="govuk-body">You can let someone else access this application if you need help or multiple
+        <p class="govuk-body">You can add contributors to this application if you need help or multiple
             people are required to provide information in the application.</p>
 
-        <h2 class="govuk-heading-m">They will be able to:</h2>
+        <h2 class="govuk-heading-m">Contributors will be able to:</h2>
 
         <ul class="govuk-list govuk-list--bullet">
             <li>view and change information</li>
@@ -27,7 +41,7 @@
             <li>view the progress of the application once submitted</li>
         </ul>
 
-        <h2 class="govuk-heading-m">They will not be able to:</h2>
+        <h2 class="govuk-heading-m">Contributors will not be able to:</h2>
 
         <ul class="govuk-list govuk-list--bullet">
             <li>delete the application completely</li>
@@ -37,23 +51,23 @@
 
         <h2 class="govuk-heading-m">Removing access</h2>
 
-        <p class="govuk-body">You can remove someones access at any time. Once removed you can invite them to access the application again if you need to.</p>
+        <p class="govuk-body">You can remove a contributors access at any time. Once removed you can invite them again in future if you need to.</p>
 
         <h2 class="govuk-heading-m">Access to personal details</h2>
 
-        <p class="govuk-body">By letting someone else access this application, they will be able to see all personal
-            details that have been entered for any individuals listed in the application.</p>
-        <p class="govuk-body">You need to make any individuals listed in the application that you are giving access to
-            someone else.</p>
+        <p class="govuk-body">Contributors will be able to see all personal
+            details that have been entered for any individuals added in the application.</p>
+        <p class="govuk-body">You need to make any individuals aware that you are giving access to the application to
+            someone else, and as a contributor, will be able to see their details.</p>
 
             <h2 class="govuk-heading-m">Declaration</h2>
 
         <p class="govuk-body">By continuing, you agree to the points listed and that you are responsible for assigning and revoking access to this access
             to this application.</p>
 
-        <button class="govuk-button" data-module="govuk-button">
+        <a class="govuk-button" data-module="govuk-button" href="/delegate/v1/add">
             Continue
-        </button>
+        </a>
 
     </div>
 </div>

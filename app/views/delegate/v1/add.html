@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+
+<section class="govuk-!-padding-top-3 gc-hero gc-hero-grey">
+<div class="govuk-width-container">
+    <div class="govuk-grid-column-half">
+        Operator licence application | Reference: OL-76563
+    </div>
+</div>
+</section>
+
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/" onclick="window.history.go(-1); return false;" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Contributors email address</h1>
+        <p class="govuk-body">An email will be sent to the contributor with details of how to access this application.</p>
+        <form>
+                <div class="govuk-form-group">
+                        <label class="govuk-label" for="email">
+                            Name of contributor
+                        </label>
+                        <input class="govuk-input" id="email" name="email" type="text">
+                    </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="email">
+                    Email address
+                </label>
+                <input class="govuk-input" id="email" name="email" type="text">
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock %}
