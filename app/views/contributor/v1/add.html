@@ -1,0 +1,112 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-link">Application tasks</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Tasks</a>
+                </li>
+                <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
+                    <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+
+                    <a class="gc-vertical-nav__link " href="#">Print application</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+
+                    <a class="gc-vertical-nav__link " href="#">Delete application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Add a contributor</h1>
+
+        <h2 class="govuk-heading-m">Contributors will be able to:</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>view and change information</li>
+            <li>delete information</li>
+            <li>view and download any files upload in this application</li>
+            <li>view the progress of the application once submitted</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Contributors will not be able to:</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>delete the application completely</li>
+            <li>pay the application fee</li>
+            <li>submit this application</li>
+        </ul>
+
+        <h2 class="govuk-heading-m">Removing contributors</h2>
+        <p class="govuk-body">You can remove contributors from your application at any time.</p>
+
+
+        <h2 class="govuk-heading-m">Contributor details</h2>
+        <p class="govuk-body">Provide the details of who you want to add as a contributor. We'll send an email telling
+            them how to continue.</p>
+
+
+        <form>
+                <div class="govuk-form-group">
+                        <label class="govuk-label govuk-!-width-two-thirds" for="name">
+                            Contributor name
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="name" name="name" type="text">
+                    </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-width-two-thirds" for="email">
+                    Contributor email address
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
+            </div>
+            <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="with-hint">
+                        Tell us what the contributors role is
+                    </label>
+                    <textarea class="govuk-textarea govuk-js-character-count " id="with-hint" name="with-hint" rows="5"
+                        aria-describedby="with-hint-info with-hint-hint"></textarea>
+                </div>
+
+                <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You can enter up to 250 characters
+                </span>
+            </div>
+
+            <a class="govuk-button" data-module="govuk-button" href="sent">
+                Send request
+            </a>
+        </form>
+
+    </div>
+
+
+</div>
+</div>
+
+{% endblock %}

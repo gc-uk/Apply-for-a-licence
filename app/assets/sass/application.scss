@@ -103,4 +103,62 @@
 
 }
 
-.gc-hero-grey{background: #f3f2f1; color: #0b0c0c;}
+.gc-hero-grey {
+    border-bottom: 1px solid #b1b4b6;
+    color: #0b0c0c;
+}
+
+.gc-application-nav {
+    text-align: right;
+}
+
+.gc-application-submenu {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    li {list-style: none; padding:0px}
+}
+
+.navigation-service {
+	border-bottom: 1px solid #bfc1c3;
+	margin: 0;
+	position: relative;
+    font-size: 0;
+    
+	padding: 14px 0 5px 0;
+}
+
+.navigation-service-name {
+	font-weight: 700;
+	text-transform: none;
+	font-size: 19px;
+	line-height: 1.25;
+	padding: 5px 0 11px 0;
+	display: inline-block;
+	max-width: 50%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+.navigation-service-switch {
+	font-weight: 400;
+	text-transform: none;
+	font-size: 19px;
+	line-height: 1.25;
+	text-decoration: none;
+	text-align: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 14px 0 11px 15px;
+}
+
+.navigation-service-switch {
+	.govuk-button{font-size: 16px; padding: 5px 6px 4px 6px;}
+}
+
+.email{background: #f3f2f1; padding: 2px 5px; font-size: 16px; font-weight: 700;}
+.app-related-items{border-top-color: #b1b4b6}

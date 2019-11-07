@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="#">In progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link " href="#">Submitted</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link " href="#">Contributor</a>
+                </li>
+            </ul>
+        </nav>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <a href="/licenceapplication/v1/start" class="govuk-button" role="button">Start an application</a>
+    </div>
+
+
+    <div class="govuk-grid-column-three-quarters">
+
+            <div class="gc-notification gc-notification--info">
+                    <h2 class="govuk-heading-m">Contribution request</h2>
+                    <p class="govuk-body">You've been invited to contribute on an application.</p>
+                    <p class="govuk-body"><a href="">View request</a></p>
+                </div>
+                        
+
+        <h1 class="govuk-heading-l">In progress applications</h1>
+
+        <div class="govuk-grid-row gc-card-group">
+                {% for i in appdata.apps %}
+                <div class="govuk-grid-column-one-half gc-card-group__item">
+                    <div class="gc-card">
+                        <a class="gc-card__link-wrapper" href="#">
+                            <div class="gc-card__content">
+                                <h3 class="govuk-heading-s">{{i.applicant}}</h3>
+                                <p class="gc-card__description govuk-!-margin-bottom-2">
+                                    Reference: {{i.ref}}</p>
+                                <p class="gc-card__description">Started {{i.started | date('DD MMMM YYYY')}}</p>
+                                <p class="govuk-tag active">{{i.type}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    
+                {% endfor%}
+            </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

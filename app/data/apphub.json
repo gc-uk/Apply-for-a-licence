@@ -1,0 +1,23 @@
+{
+    "apps":[{
+        "applicant": "Jane Smith",
+        "type": "Personal Management",
+        "started": "2019-11-09",
+        "ref": "PML-876543"
+    },
+    {
+        "applicant": "BingoSam Limited",
+        "type": "Operator",
+        "started": "2019-10-19",
+        "ref": "OL-173633"
+    }],
+    "contributor":[{
+        "applicant": "My Big Casino Limited",
+        "type": "Operator",
+        "started": "2019-10-17",
+        "status": "In progress",
+        "ref": "OL-124241",
+        "owner": "Simon Hawes",
+        "owneremail": "simon.hawes@example.com"
+    }]
+}

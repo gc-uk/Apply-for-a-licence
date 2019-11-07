@@ -1,0 +1,105 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Applications</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-button" role="button">New application</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v1/hub-with-apps">In progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v1/hub-with-apps-submitted">Submitted</a>
+                </li>
+                <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link "
+                        href="/applicationhub/v1/hub-with-apps-contributor">Contributor</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Contributor applications</h1>
+
+        <h2 class="govuk-heading-m">Pending requests</h2>
+        <div class="govuk-inset-text">
+            <p class="govuk-body">You don't have any pending requests.</p>
+        </div>
+
+        <h2 class="govuk-heading-m">Applications you contribute on</h2>
+        <div class="govuk-inset-text">
+            <p class="govuk-body">You're not a contributor to any other applications.</p>
+        </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    What are contributor applications?
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+
+                <p class="govuk-body">You can help someone with their application by becoming a contributor.</p>
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        You won't be able to complete
+                        the declaration, pay or submit an application on behalf of the applicant.
+                    </strong>
+                </div>
+
+                <h2 class="govuk-heading-m">How do I become a contributor?</h2>
+                <p class="govuk-body">The person who created the application will need to request you to become a
+                    contributor.
+                    They can do this from within their application.</p>
+                <p class="govuk-body">They will need to enter <span class="email">sallysmith@mycompany.com</span> as the
+                    contributor email. </p>
+                <p class="govuk-body"> You will
+                    then get an email notifying you have been asked to be a contributor on their application.</p>
+                <p class="govuk-body">You will also see any requests to be a contributor in this servive.</p>
+                <p class="govuk-body">Once you have accepted the request, you can then access the application.</p>
+
+                <h2 class="govuk-heading-m">Stop being a contributor</h2>
+                <p class="govuk-body">You or the applicant can remove contributor access at any time from within the
+                    application.</p>
+            </div>
+        </details>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

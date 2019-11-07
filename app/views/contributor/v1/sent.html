@@ -1,0 +1,74 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-link">Application tasks</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Tasks</a>
+                </li>
+                <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
+                    <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+
+                    <a class="gc-vertical-nav__link " href="#">Print application</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+
+                    <a class="gc-vertical-nav__link " href="#">Delete application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+
+
+        <div class="gc-notification gc-notification--success govuk-!-margin-bottom-6">
+            <h1 class="govuk-heading-l">Request sent</h1>
+            <p class="govuk-body">A contribution request has been sent to James Peach using the email address
+                james.peach@example.com.</p>
+                <p class="govuk-body">We have also sent you an email confirming this action.</p>
+            <p class="govuk-body">Return to the <a href="with-people">list of contributors</a>.</p>
+
+        </div>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">We will send you an email when James Peach accepts or rejects the request to contribute on
+            this application.</p>
+
+        <p class="govuk-body">They won't be able to access your application until they accept the request.</p>
+
+        <p class="govuk-body">If you think you've got the wrong email address, you must revoke access and add the
+            contributor again.</p>
+            <p class="govuk-body">You can revoke access from the <a href="with-people">list of contributors</a>.</p>
+
+
+    </div>
+</div>
+
+{% endblock %}

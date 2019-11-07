@@ -1,0 +1,81 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-link">Application tasks</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Tasks</a>
+                </li>
+                <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
+                        <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+
+                    <a class="gc-vertical-nav__link " href="#">Print application</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+
+                    <a class="gc-vertical-nav__link " href="#">Delete application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Contributors</h1>
+
+<p class="govuk-body">These people are contributors on this application.</p>
+
+        <table class="govuk-table">
+                <caption class="govuk-table__caption"></caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Contributor</th>
+                        <th scope="col" class="govuk-table__header">Status</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  
+                    <tr class="govuk-table__row">
+                        <td scope="row" class="govuk-table__cell">James Peach<br><span class="govuk-body-s">james.peach@example.com</span></td>
+                        <td class="govuk-table__cell">Pending</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric"><a href="index-with-vertical">Revoke</a></td>
+                    </tr>
+    
+             
+                </tbody>
+            </table>
+      
+        <p class="govuk-body"><a class="govuk-button" href="/contributor/v1/add">Add a contributor</a></p>
+
+    </div>
+
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Applications</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-button" role="button">New application</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="#">In progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link " href="#">Submitted</a>
+                </li>
+                <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link " href="#">Contributor</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">In progress applications</h1>
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption">Applications</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Applicant</th>
+                    <th scope="col" class="govuk-table__header">Type</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date started</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                {% for i in appdata.apps %}
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header"><a href="#">{{i.applicant}}</a></th>
+                    <td class="govuk-table__cell">{{i.type}}</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">{{i.started | date('DD MMM YYYY')}}</td>
+                </tr>
+
+                {%endfor%}
+            </tbody>
+        </table>
+
+        <a href="/licenceapplication/v1/start" class="govuk-button  govuk-button--secondary" role="button">Start an
+            application</a>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

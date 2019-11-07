@@ -1,0 +1,61 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-link">Application tasks</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Tasks</a>
+                </li>
+                <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
+                        <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+
+                    <a class="gc-vertical-nav__link " href="#">Print application</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+
+                    <a class="gc-vertical-nav__link " href="#">Delete application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Contributors</h1>
+
+        <div class="govuk-inset-text">
+            <p class="govuk-body">You've not added any contributors to this application.</p>
+        </div>
+        <p class="govuk-body"><a class="govuk-button" href="/contributor/v1/add">Add a contributor</a></p>
+
+    </div>
+
+
+</div>
+</div>
+
+{% endblock %}

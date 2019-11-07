@@ -5,6 +5,7 @@ const router = express.Router()
 var ggyController = require('./controllers/ggycalculatorController.js')
 var feesController = require('./controllers/feesController.js')
 var idverificationController = require('./controllers/idverificationController.js')
+var apphubccontroller = require('./controllers/apphubcontroller.js')
 
 // GGY Calculator
 router.get('/ggy-calculator/calculator', ggyController.calculator_get);
@@ -31,4 +32,11 @@ router.get('/idverification/v1/list', idverificationController.list_get);
 router.post('/idverification/v1/list', idverificationController.list_post);
 router.get('/idverification/v1/search', idverificationController.search_get);
 
+// App hub controller
+router.get('/applicationhub/v1/hub-with-apps', apphubccontroller.hub_with_apps_get);
+router.get('/applicationhub/v2/hub-with-apps', apphubccontroller.hub_with_apps2_get);
+router.get('/applicationhub/v3/hub-with-apps', apphubccontroller.hub_with_apps3_get);
+router.get('/applicationhub/v1/hub-with-contributor', apphubccontroller.hub_with_contributor_get);
+router.get('/applicationhub/v2/hub-with-contributor', apphubccontroller.hub_with_contributor2_get);
+router.get('/applicationhub/v3/hub-with-contributor', apphubccontroller.hub_with_contributor3_get);
 module.exports = router
