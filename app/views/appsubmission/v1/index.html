@@ -1,0 +1,64 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-link">Application tasks</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Application contributors</h1>
+
+
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+        <aside class="app-related-items" role="complementary">
+            <h2 class="govuk-heading-m" id="subsection-title">
+                Application actions
+            </h2>
+            <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                    <li>
+                        <a class="govuk-link govuk-!-font-weight-bold" href="#">
+                            Contributors
+                        </a>
+                    </li>
+                    <li>
+                        <a class="govuk-link" href="#">
+                            Print application
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="govuk-link" href="#">
+                            Delete application
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
