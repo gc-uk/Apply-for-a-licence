@@ -26,10 +26,13 @@ gc-header-hero
         <nav class="gc-vertical-nav">
             <ul class="gc-vertical-nav__section">
                 <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
-                    <a class="gc-vertical-nav__link " href="#">Application progress</a>
+                    <a class="gc-vertical-nav__link " href="/appsubmission/v1/">Submission</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/appsubmission/v1/progress">Application progress</a>
                 </li>
                 <li class="gc-vertical-nav__section-item ">
-                        <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                    <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
                 </li>
                 <li class="gc-vertical-nav__section-item ">
                     <a class="gc-vertical-nav__link " href="#">Print application</a>
@@ -42,10 +45,39 @@ gc-header-hero
     </div>
 
     <div class="govuk-grid-column-three-quarters">
-        <h1 class="govuk-heading-l">Application progress</h1>
 
-  
-            
+
+
+        <div class="gc-notification gc-notification--success">
+            <h1 class="govuk-heading-l">Application submitted</h1>
+            <p class="govuk-body-l">Reference: OL-123456</p>
+            <p class="govuk-body">We've sent you an email confirming submission.</p>
+        </div>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">We will begin processing your application using the information you have provided.</p>
+
+        <p class="govuk-body">If we need any additional information, we will email you at <span
+                class="govuk-!-font-weight-bold">john.smith@example.com</span> with
+            details and how to provide any additional information. </p>
+
+        <p class="govuk-body">Make sure your email address is kept up to date through your profile.</p>
+
+        <h2 class="govuk-heading-m">Updates on your application</h2>
+        <p class="govuk-body">We'll send you regular updates on your application. You'll be able to see the progress of
+            your application by selecting it from the applications hub.</p>
+
+
+        <h2 class="govuk-heading-m">What did you think of this service?</h2>
+        <p class="govuk-body"><a href="/">Fill out this short survey</a> to let us know what you think of this service.
+        </p>
+
+        <h2 class="govuk-heading-m">What do you want to do next?</h2>
+
+        <ul class="govuk-list">
+            <li>View the <a href="/appsubmission/v1/progress">application progress</a></li>
+            <li>Go to your <a href="/applicationhub/v1/hub-with-apps">application hub</a></li>
+        </ul>
 
     </div>
 

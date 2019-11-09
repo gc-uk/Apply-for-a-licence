@@ -1,0 +1,51 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+<!-- <div class=" govuk-width-container">
+        <div class="navigation-service">
+            <div class="navigation-service-name">Application hub</div>
+            <div class="navigation-service-switch">
+                <a href="#" class="govuk-button" role="button">New application</a>
+            </div>
+        </div>
+</div>  -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+
+
+    <div class="govuk-grid-column-full">
+
+        <div class="gc-notification gc-notification--info">
+            <h1 class="govuk-heading-m">Notifications</h1>
+            <p class="govuk-body">The following actions require your attention.</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>You've got a request to <a href="/applicationhub/v1/hub-with-contributor">contribute on an
+                        application</a></li>
+
+                <li>We need some additional information for application <a
+                        href="/appsubmission/v1/progress-with-docs">OL-123456</a></li>
+            </ul>
+        </div>
+
+      
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

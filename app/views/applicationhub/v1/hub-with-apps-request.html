@@ -26,13 +26,6 @@
 
         <nav class="gc-vertical-nav">
             <ul class="gc-vertical-nav__section">
-                    <li class="gc-vertical-nav__section-item">
-                            <span class="gc-vertical-nav--count">2</span>
-                            <a class="gc-vertical-nav__link " href="/applicationhub/v1/notifications">Notifications</a>
-                        </li>
-                        <li class="gc-vertical-nav__section-item">
-                                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-                        </li>
                 <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
                     <span class="gc-vertical-nav--count">2</span>
                     <a class="gc-vertical-nav__link " href="/applicationhub/v1/hub-with-apps">In progress</a>
@@ -55,9 +48,13 @@
 {% if data['showcontributor'] === true %}
 
 <div class="gc-notification gc-notification--info">
-        <h2 class="govuk-heading-m">Contribution request</h2>
-        <p class="govuk-body">You've been invited to contribute on an application.</p>
-        <p class="govuk-body"><a href="/applicationhub/v1/hub-with-contributor">View request</a></p>
+        <h2 class="govuk-heading-m">Notifications</h2>
+        <p class="govuk-body">The following actions require your attention.</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>You've got a request to <a href="/applicationhub/v1/hub-with-contributor">contribute on an application</a></li>
+            
+            <li>We need some additional information for application <a href="/appsubmission/v1/progress-with-docs">OL-123456</a></li>
+        </ul>
     </div>
 
 {%endif%}

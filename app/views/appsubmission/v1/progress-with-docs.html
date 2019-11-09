@@ -1,0 +1,86 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
+                    <a class="gc-vertical-nav__link " href="#">Application progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                        <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Print application</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="#">Withdraw application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Application progress</h1>
+
+  
+              <div class="timeline">
+                <ul>
+                  <li class="action_needed">
+                    <h2 class="govuk-heading-m">Your application is on hold</h2>
+                    <p class="time">2 February 2020 at 3:22pm</p>
+                    <p>We need some additional information before we can continue processing your application.</p>
+                    <p></p>
+                    <p><a class="govuk-button govuk-!-margin-bottom-0" href="#">View and take action</a></p>
+                  </li>
+                  <li>
+                    <h2 class="govuk-heading-m">Application processing started</h2>
+                    <p class="time">2 February 2020 at 11:32am</p>
+                    <p>Your licence application has joined the processing queue.</p>
+                  </li>
+                  <li>
+                    <h2  class="govuk-heading-m">Application submitted</h2>
+                    <p class="time">28 January 2020 at 11:17am</p>
+                  </li>
+                  <li>
+                    <h2  class="govuk-heading-m">Application payment received</h2>
+                    <p class="time">28 January 2020 at 11:15am</p>
+                    <p>Application fee of £16,621.90 paid - reference 87HRF39HF3EH</p>
+                  </li>
+                  <li>
+                    <h2  class="govuk-heading-m">Application created</h2>
+                    <p class="time">20 December 2019 at 9:06am</p>
+                   
+                  </li>
+                </ul>
+          
+          </div>
+
+    </div>
+
+
+</div>
+</div>
+
+{% endblock %}
