@@ -1,0 +1,95 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+  <div class="navigation-service">
+    <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+    <div class="navigation-service-switch">
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="gc-vertical-nav">
+      <ul class="gc-vertical-nav__section">
+        <li class="gc-vertical-nav__section-item">
+          <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Application hub</a>
+        </li>
+        <li class="gc-vertical-nav__section-item">
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </li>
+        <li class="gc-vertical-nav__section-item">
+          <a class="gc-vertical-nav__link " href="/appsubmission/v1/progress-with-docs">Application
+            progress</a>
+        </li>
+        <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
+          <a class="gc-vertical-nav__link " href="/appsubmission/v1/additionalinfo">Additional
+            information</a>
+        </li>
+        <li class="gc-vertical-nav__section-item ">
+          <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+        </li>
+        <li class="gc-vertical-nav__section-item ">
+          <a class="gc-vertical-nav__link " href="#">Print application</a>
+        </li>
+        <li class="gc-vertical-nav__section-item">
+          <a class="gc-vertical-nav__link " href="#">Withdraw application</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-l">Additional information</h1>
+
+    <p class="govuk-inset-text">We don't need anything from you at the moment.</p>
+
+    <h2 class="govuk-heading-m">Previously submitted information</h2>
+
+
+    <div class="gc-documents-list">
+
+      <div class="gc-documents-list--group">
+        <div class="gc-documents-list--row">
+          <div class="gc-documents-list--doc-name">Letter of good standing from overseas bank</div>
+          <div class="gc-documents-list--doc-action"><a href="/documents/v2/manage">View</a></div>
+        </div>
+        <div class="gc-documents-list--doc-list">
+          <div class="gc-documents-list--doc-files">1 document uploaded</div>
+        </div>
+      </div>
+
+
+      <div class="gc-documents-list--group">
+        <div class="gc-documents-list--row">
+          <div class="gc-documents-list--doc-name">We need some more details about one of your shareholders</div>
+          <div class="gc-documents-list--doc-action"><a href="/appsubmission/v2/provideinformation">View</a></div>
+        </div>
+        <div class="gc-documents-list--doc-list">
+          <div class="gc-documents-list--doc-files">Details provided</div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+
+<div class=" govuk-width-container">
+    <div class="navigation-service"> <div class="navigation-service-name">Application hub</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-button" role="button">New application</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                    <li class="gc-vertical-nav__section-item">
+                            <span class="gc-vertical-nav--count gc-vertical-nav--count--notification">2</span>
+                            <a class="gc-vertical-nav__link " href="/applicationhub/v2/notifications">Notifications</a>
+                        </li>
+                        <li class="gc-vertical-nav__section-item">
+                            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                        </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps">In progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Submitted</a>
+                </li>
+                <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count">1</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-contributor">Contributor</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Request to contribute on an application</h1>
+
+       <p class="govuk-body">Contributing on an application means you can help someone else with their licence application.</p>
+
+       <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Guidance for contributors
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+                    <h2 class="govuk-heading-m">Contributors will be able to:</h2>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>view and change information</li>
+                        <li>delete information</li>
+                        <li>view and download any files upload in this application</li>            
+                        <li>view the progress of the application once submitted</li>
+                    </ul>
+             
+                    <h2 class="govuk-heading-m">Contributors will not be able to:</h2>
+             
+                    <ul class="govuk-list govuk-list--bullet">
+                        <li>delete the application completely</li>
+                        <li>pay the application fee</li>
+                        <li>submit this application</li>
+                    </ul>
+                    </div>
+          </details>
+
+      
+ 
+                <dl class="govuk-summary-list ">
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Application
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            OL-123456 / Big Casino Limited
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Type
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            Operator licence
+                        </dd>
+                    </div>
+                    <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                            Requestor
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                            John Smith<br>john.smith@example.com
+                        </dd>
+                    </div>
+                </dl>
+    
+                <h2 class="govuk-heading-m">What do you want to do with this request?</h2>
+    
+                <a href="/applicationhub/v2/contributor-complete" class="govuk-button govuk-!-margin-bottom-0  govuk-!-margin-right-3">Accept it</a> 
+                <a href="/applicationhub/v2/contributor-rejected"
+                    class="govuk-button  govuk-!-margin-bottom-0 govuk-button--warning">Reject it</a>
+           
+
+
+    </div>
+</div>
+
+{% endblock %}

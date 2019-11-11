@@ -1,0 +1,70 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+        <div class="navigation-service"> <div class="navigation-service-name">Application hub</div>
+            <div class="navigation-service-switch">
+                <a href="#" class="govuk-button" role="button">New application</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-quarter">
+                <nav class="gc-vertical-nav">
+                    <ul class="gc-vertical-nav__section">
+                            <li class="gc-vertical-nav__section-item">
+                                    <span class="gc-vertical-nav--count gc-vertical-nav--count--notification">2</span>
+                                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/notifications">Notifications</a>
+                                </li>
+                                <li class="gc-vertical-nav__section-item">
+                                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                                </li>
+                        <li class="gc-vertical-nav__section-item ">
+                            <span class="gc-vertical-nav--count">2</span>
+                            <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps">In progress</a>
+                        </li>
+                        <li class="gc-vertical-nav__section-item ">
+                            <span class="gc-vertical-nav--count">2</span>
+                            <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Submitted</a>
+                        </li>
+                        <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
+                            <span class="gc-vertical-nav--count">1</span>
+                            <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-contributor">Contributor</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+      <div class="gc-notification gc-notification--success govuk-!-margin-bottom-6">
+          <h1 class="govuk-heading-l">Contributor request accepted</h1>
+          <p class="govuk-body">You're now a contributor on application OL-123456</p>
+
+          <p class="govuk-body">We've sent the application owner an email to let them know you've accepted their request.</p>
+          <p class="govuk-body">View <a href="applicationhub/v2/contributor-list">applications you contribute on</a>.
+          </p>
+
+      </div>
+
+     
+
+  </div>
+
+</div>
+
+
+{% endblock %}

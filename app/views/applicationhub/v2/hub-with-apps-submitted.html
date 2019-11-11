@@ -37,7 +37,7 @@
                     <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps">In progress</a>
                 </li>
                 <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
-                    <span class="gc-vertical-nav--count">1</span>
+                    <span class="gc-vertical-nav--count">2</span>
                     <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Submitted</a>
                 </li>
                 <li class="gc-vertical-nav__section-item ">
@@ -60,15 +60,18 @@
                         <tr class="govuk-table__row">
                             <th scope="col" class="govuk-table__header">Applicant</th>
                             <th scope="col" class="govuk-table__header">Type</th>
-                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date submitted</th>
+                            <th scope="col" class="govuk-table__header">Date submitted</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Processing status</th>
                         </tr>
                     </thead>
                     <tbody class="govuk-table__body">
                         {% for i in appdata.submitted %}
                         <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__header"><a href="/appsubmission/v1/progress">{{i.applicant}}</a></th>
+                            <th scope="row" class="govuk-table__header"><a href="{{i.link}}">{{i.applicant}}</a></th>
                             <td class="govuk-table__cell">{{i.type}}</td>
-                            <td class="govuk-table__cell govuk-table__cell--numeric">{{i.started | date('DD MMM YYYY')}}</td>
+                            <td class="govuk-table__cell">{{i.started | date('DD MMM YYYY')}}</td>
+                       
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="{{i.link}}">{{i.pstatus}}</a></td> 
                         </tr>
         
                         {%endfor%}

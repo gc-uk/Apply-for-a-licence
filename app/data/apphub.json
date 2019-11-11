@@ -25,6 +25,16 @@
         "type": "Operator",
         "started": "2019-10-28",
         "status": "Submitted",
-        "ref": "OL-128911"
+        "ref": "OL-128911",
+        "link":"/appsubmission/v1/progress",
+        "pstatus": "Processing"
+    },{
+        "applicant": "Small Casino Limited",
+        "type": "Operator",
+        "started": "2019-10-27",
+        "status": "Submitted",
+        "ref": "OL-128911",
+        "link":"/appsubmission/v1/progress-with-docs",
+        "pstatus": "Action needed"
     }]
 }

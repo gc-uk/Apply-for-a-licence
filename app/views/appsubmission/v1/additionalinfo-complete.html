@@ -31,11 +31,12 @@ gc-header-hero
         <li class="gc-vertical-nav__section-item">
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
         </li>
-        <li class="gc-vertical-nav__section-item   gc-vertical-nav__section-item--current">
-          <a class="gc-vertical-nav__link " href="#">Application progress</a>
+        <li class="gc-vertical-nav__section-item">
+          <a class="gc-vertical-nav__link " href="/appsubmission/v1/progress-with-docs">Application
+            progress</a>
         </li>
-        <li class="gc-vertical-nav__section-item ">
-          <a class="gc-vertical-nav__link " href="/appsubmission/v1/noadditionalinfo">Additional
+        <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
+          <a class="gc-vertical-nav__link " href="/appsubmission/v1/additionalinfo">Additional
             information</a>
         </li>
         <li class="gc-vertical-nav__section-item ">
@@ -52,39 +53,20 @@ gc-header-hero
   </div>
 
   <div class="govuk-grid-column-three-quarters">
-    <h1 class="govuk-heading-l">Application progress</h1>
 
+      <div class="gc-notification gc-notification--success govuk-!-margin-bottom-6">
+          <h1 class="govuk-heading-l">Information submitted</h1>
+          <p class="govuk-body">We'll check the details you have submitted. If we need anything else we'll contact you.</p>
+              <p class="govuk-body">We've also sent you an email confirming this action.</p>
+          <p class="govuk-body">View your <a href="/appsubmission/v1/progress-with-submissions">application progress</a>.</p>
 
-    <div class="timeline">
-      <ul>
+      </div>
 
-        <li>
-          <h2 class="govuk-heading-m">Application processing started</h2>
-          <p class="time">2 February 2020 at 11:32am</p>
-          <p>Your licence application has joined the processing queue.</p>
-        </li>
-        <li>
-          <h2 class="govuk-heading-m">Application submitted</h2>
-          <p class="time">28 January 2020 at 11:17am</p>
-        </li>
-        <li>
-          <h2 class="govuk-heading-m">Application payment received</h2>
-          <p class="time">28 January 2020 at 11:15am</p>
-          <p>Application fee of £16,621.90 paid - reference 87HRF39HF3EH</p>
-        </li>
-        <li>
-          <h2 class="govuk-heading-m">Application created</h2>
-          <p class="time">20 December 2019 at 9:06am</p>
-          <p>Application reference OL-123456</p>
-        </li>
-      </ul>
-
-    </div>
+     
 
   </div>
 
+</div>
 
-</div>
-</div>
 
 {% endblock %}
