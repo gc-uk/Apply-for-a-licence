@@ -1,0 +1,110 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service"> <div class="navigation-service-name">Application hub</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-button" role="button">New application</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count  gc-vertical-nav--count--notification">2</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/notifications">Notifications</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps">In progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Submitted</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <span class="gc-vertical-nav--count">0</span>
+                    <a class="gc-vertical-nav__link "
+                        href="/applicationhub/v2/hub-with-apps-contributor">Contributor</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="govuk-grid-column-three-quarters">
+
+        <h1 class="govuk-heading-l">Notifications</h1>
+
+        <div class="gc-notification gc-notification--info">
+            <h1 class="govuk-heading-m govuk-!-margin-bottom-2">Contributor request</h1>
+                    <p class="govuk-body-s">8 November 2019 at 10:28am</p>
+            <p class="govuk-body">You've got a request to contribute on application OL-123456 from John Smith.</p>
+                    <p class="govuk-!-margin-bottom-3">
+                    <a href="/applicationhub/v2/hub-with-contributor" class="govuk-button govuk-!-margin-bottom-0">Take action</a></p>
+        </div>
+
+       
+
+        <div class="gc-notification gc-notification--info">
+            <h1 class="govuk-heading-m govuk-!-margin-bottom-2">Application on hold</h1>
+                    <p class="govuk-body-s">19 October 2019 at 4:35pm</p>
+            <p class="govuk-body">We need some information for application OL-567822</p>
+                    <p class="govuk-!-margin-bottom-3">
+                    <a href="/appsubmission/v1/progress-with-docs" class="govuk-button govuk-!-margin-bottom-0">Take action</a></p>
+        </div>
+
+
+        <!-- <h1 class="govuk-heading-m">Contributor request</h1>
+        <p class="govuk-body">You've got a request to <a href="/applicationhub/v1/hub-with-contributor">contribute
+                on an
+                application</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h1 class="govuk-heading-m">Application on hold</h1>
+        <p class="govuk-body">We need some additional information for application <a
+                href="/appsubmission/v1/progress-with-docs">OL-123456</a></p>
+
+
+        <div class="govuk-inset-text">
+            <h1 class="govuk-heading-m">Contributor request</h1>
+            <p class="govuk-body">You've got a request to <a href="/applicationhub/v1/hub-with-contributor">contribute
+                    on an
+                    application</a></p>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <div class="govuk-inset-text">
+            <h1 class="govuk-heading-m">Application on hold</h1>
+            <p class="govuk-body">We need some additional information for application <a
+                    href="/appsubmission/v1/progress-with-docs">OL-123456</a></p>
+        </div> -->
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

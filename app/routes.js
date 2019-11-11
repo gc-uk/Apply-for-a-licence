@@ -39,4 +39,6 @@ router.get('/applicationhub/v3/hub-with-apps', apphubccontroller.hub_with_apps3_
 router.get('/applicationhub/v1/hub-with-contributor', apphubccontroller.hub_with_contributor_get);
 router.get('/applicationhub/v2/hub-with-contributor', apphubccontroller.hub_with_contributor2_get);
 router.get('/applicationhub/v3/hub-with-contributor', apphubccontroller.hub_with_contributor3_get);
+
+router.get('/applicationhub/v2/hub-with-apps-submitted', apphubccontroller.hub_with_apps_submitted_get);
 module.exports = router

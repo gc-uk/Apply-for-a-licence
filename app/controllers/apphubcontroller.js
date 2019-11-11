@@ -12,6 +12,13 @@ exports.hub_with_apps2_get = function (req, res) {
     res.render('applicationhub/v2/hub-with-apps', {appdata});
 }
 
+exports.hub_with_apps_submitted_get = function (req, res) {
+
+    var appdata = require('../data/apphub.json');
+
+    res.render('applicationhub/v2/hub-with-apps-submitted', {appdata});
+}
+
 exports.hub_with_apps3_get = function (req, res) {
 
     var appdata = require('../data/apphub.json');
