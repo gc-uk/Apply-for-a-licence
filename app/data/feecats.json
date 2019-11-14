@@ -12,5 +12,31 @@
         "incompatibleIDs": [{
             
         }] 
+    },{
+        "id":"nr-bi-a2",
+        "type": "Non-remote",
+        "activity": "Betting intermediary",
+        "category": "A2",
+        "contentfulId": "",
+        "appfee": 178.00,
+        "annual": 280.00,
+        "min": 550000.00,
+        "max": 2499999.00,
+        "incompatibleIDs": [{
+            
+        }] 
+    },{
+        "id":"nr-bi-a3",
+        "type": "Non-remote",
+        "activity": "Betting intermediary",
+        "category": "A3",
+        "contentfulId": "",
+        "appfee": 178.00,
+        "annual": 280.00,
+        "min": 2500000.00,
+        "max": 5500000.00,
+        "incompatibleIDs": [{
+            
+        }] 
     }]
 }

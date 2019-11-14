@@ -1,0 +1,50 @@
+{% extends "layout-fees.html" %}
+
+{% block pageTitle %}
+Calculate Gross Gambling Yield
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Gambling licence fee calculation</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+            {% include "../partials/_appFeeBlue-withoutbutton.html" %}           
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+            {% include "../partials/_firstAnnual.html" %}           
+    </div>
+    <div class="govuk-grid-column-one-third">
+            {% include "../partials/_annual.html" %}   
+    </div>
+
+    <div class="govuk-grid-column-full">
+        <hr class="govuk-section-break govuk-!-margin-bottom-3 govuk-!-margin-top-0 govuk-section-break--visible">
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+            {% include "../partials/_registerlicence.html" %}
+
+    </div>
+
+</div>
+
+
+{% endblock %}

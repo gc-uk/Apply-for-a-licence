@@ -25,8 +25,13 @@ router.get('/fees/option2/summary', feesController.option2_summary_get);
 router.get('/fees/option3/summary', feesController.option3_summary_get);
 router.get('/fees/option4/summary', feesController.option4_summary_get);
 
+// Screens
+router.get('/fees/screens/', feesController.fees_index);
+router.get('/fees/screens/non-remote', feesController.nonremote_index);
+
 // Add fee to summary
 router.get('/fees/screens/add/:id', feesController.addToSummary);
+
 
 
 // ID Verification
