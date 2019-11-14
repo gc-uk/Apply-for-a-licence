@@ -25,3 +25,20 @@ exports.option4_summary_get = function (req, res) {
 
     res.render('fees/option4/summary', {feeCalc});
 }
+
+
+exports.addToSummary = function (req, res) {
+
+    console.log('add')
+    var fees = require('../data/feecats.json');
+
+    // get added item and add to summary array
+
+    var feeSession = req.session["fees"];
+
+    if(feeSession !== null){
+        
+    }
+
+    res.render('fees/screens/summary', {feeSummary});
+}

@@ -1,0 +1,16 @@
+{
+    "categories": [{
+        "id":"nr-bi-a1",
+        "type": "Non-remote",
+        "activity": "Betting intermediary",
+        "category": "A1",
+        "contentfulId": "",
+        "appfee": 178.00,
+        "annual": 280.00,
+        "min": 0.00,
+        "max": 549999.00,
+        "incompatibleIDs": [{
+            
+        }] 
+    }]
+}

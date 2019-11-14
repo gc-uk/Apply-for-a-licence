@@ -25,6 +25,9 @@ router.get('/fees/option2/summary', feesController.option2_summary_get);
 router.get('/fees/option3/summary', feesController.option3_summary_get);
 router.get('/fees/option4/summary', feesController.option4_summary_get);
 
+// Add fee to summary
+router.get('/fees/screens/add/:id', feesController.addToSummary);
+
 
 // ID Verification
 router.post('/idverification/v1/add', idverificationController.add_post);
