@@ -1,0 +1,89 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% include "../partials/_feetop.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+           
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">16</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Non-remote</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">10</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/ancillary">Ancillary</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">4</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/linked">Linked licence</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">19</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/remote">Remote</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/personal">Personal licences</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="govuk-grid-column-three-quarters">
+
+
+
+        <h1 class="govuk-heading-l">Find out how much a gambling licence will cost</h1>
+        <p class="govuk-body">Use this calculator to find out how much a gambling licence will cost.</p>
+        <div class="govuk-inset-text">
+              
+        <p class="govuk-body">We must not be in a position where we need to tell people how to use this.</p>
+
+        <p class="govuk-body">See how this works first before we consider writing content to tell people how to use it!
+        </p>
+     </div>
+
+
+        <div class="gc-fee-summary-selections">
+            <h1 class="govuk-heading-m">Selected activities</h1>
+
+            <p class="govuk-body">You have not selected any activities</p>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">What this page is for</h3>
+        <p class="govuk-body">This page displays applications that have been started but not yet paid and submitted.
+            Clicking on the applicant name will take the user to the outstanding tasks for the application.</p>
+        <h3 class="govuk-heading-m">Known issues</h3>
+        <p class="govuk-body">There are no known issues for this page.</p>
+    </div>
+</div>
+{% endblock %}

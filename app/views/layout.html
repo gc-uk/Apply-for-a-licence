@@ -104,7 +104,69 @@
             {% block content %}{% endblock %}</div>
     </main>
 
+    {% if data["helpEnabled"] === true %}
+    <section id="gc-page-help" class="gc-page-help">
+        <div class="govuk-width-container">
+            {% block pageHelp %}
+            {% endblock %}
 
+            <div class="govuk-grid-row">
+
+                <div class="govuk-grid-column-two-thirds">
+
+                 
+
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                            Give us feedback about this page
+                            </span>
+                        </summary>
+                        <div class="govuk-details__text">
+
+                    <p class="govuk-body">You can report a problem or if users struggle with something on this page directly to the Digital
+                        Team.</p>
+
+                            <form method="POST">
+                                <div class="govuk-character-count" data-module="govuk-character-count"
+                                    data-maxlength="200">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="details">
+                                            What do you want to tell us?
+                                        </label>
+                                        <span id="details-hint" class="govuk-hint">
+                                            Don't use this to report application-specific issues. These need to go
+                                            through TopDesk.
+                                        </span>
+                                        <textarea class="govuk-textarea govuk-js-character-count " id="details"
+                                            name="details" rows="5"
+                                            aria-describedby="details-info details-hint"></textarea>
+                                    </div>
+
+                                    <span id="details-info" class="govuk-hint govuk-character-count__message"
+                                        aria-live="polite">
+                                        You can enter up to 200 characters
+                                    </span>
+                                </div>
+
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="name">
+                                        Your name
+                                    </label>
+                                    <input class="govuk-input" id="name" name="name" type="text">
+                                </div>
+
+                                <button class="govuk-button" data-module="govuk-button">
+                                    Send feedback
+                                </button>
+                            </form>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
 
     <section>
         <div class="gc-footer-top">

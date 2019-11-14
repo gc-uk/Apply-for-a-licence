@@ -1,0 +1,238 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% include "../../partials/_feetop.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+               
+                <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count">16</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Non-remote</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">10</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/ancillary">Ancillary</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">4</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/linked">Linked licence</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">19</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/remote">Remote</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/personal">Personal licences</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                </li>
+                <p class="govuk-heading-s">Tools</p>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/">GGY</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Non-remote activities</h1>
+        <p class="govuk-body">There isn't a single page on the GC website which says what non-remote means. We need to
+            fix this!</p>
+        <div class="gc-documents-list">
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Adult gaming centre</div>
+                    <div class="gc-documents-list--doc-action"><a href="/fees/screens/non-remote/agc">Options</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">This licence is for adult gaming centres, often called
+                        arcades</div>
+                </div>
+            </div>
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Betting intermediary</div>
+                    <div class="gc-documents-list--doc-action"><a href="/fees/screens/non-remote/bi">Options</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">Bring two or more betting parties together so they can bet
+                        against each other, but you never have liability for their bets.</div>
+                </div>
+            </div>
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Bingo</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Casino 1968</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Casino 2005</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">External lottery manager</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Family entertainment centre</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Gambling software</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Gaming machine technical (Full)</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Gaming machine technical (Software)</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Gaming machine technical (Supplier)</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">General betting limited</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">General betting standard</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">General betting standard (no gaming machines)</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Pool betting</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+
+            <div class="gc-documents-list--group">
+                <div class="gc-documents-list--row">
+                    <div class="gc-documents-list--doc-name">Society lottery</div>
+                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                </div>
+                <div class="gc-documents-list--doc-list">
+                    <div class="gc-documents-list--doc-files">...</div>
+                </div>
+            </div>
+        </div>
+
+
+        {% include "../../partials/_summary.html" %}          
+
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">What this page is for</h3>
+        <p class="govuk-body">This page displays applications that have been started but not yet paid and submitted.
+            Clicking on the applicant name will take the user to the outstanding tasks for the application.</p>
+        <h3 class="govuk-heading-m">Known issues</h3>
+        <p class="govuk-body">There are no known issues for this page.</p>
+    </div>
+</div>
+{% endblock %}

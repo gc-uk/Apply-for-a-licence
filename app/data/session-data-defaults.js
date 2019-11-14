@@ -20,5 +20,6 @@ Example usage:
 module.exports = {
 
   // Insert values here
-"showcontributor":false
+"showcontributor":false,
+"helpEnabled": false
 }
