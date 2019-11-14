@@ -349,3 +349,269 @@
   border-top: 5px solid #b1b4b6;
   margin-top: 25px;
 }
+
+
+
+.animated-expandmore__button,
+.simple-expandmore__button {
+  /*color: #148297; contraaaaaaaast */
+  color: #10798E;
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  font: inherit;
+  font-size: 1.4em;
+  border: 0;
+  text-align: left;
+}
+
+.animated-expandmore__button::before,
+.simple-expandmore__button::before {
+  content: '';
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  background-image: url(https://van11y.net/layout/images/icon-arrow-green_20180126.svg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  margin-right: .25em;
+}
+
+[aria-expanded="true"].animated-expandmore__button::before,
+[aria-expanded="true"].simple-expandmore__button::before {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+/* This is the opened state */
+.animated-expandmore__to_expand {
+  display: block;
+  overflow: hidden;
+  opacity: 1;
+  transition: visibility 0s ease, max-height .5s ease, opacity .5s ease;
+  max-height: 140em;
+  /* magic number for max-height = enough height */
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+/* This is the hidden state */
+[data-hidden=true].animated-expandmore__to_expand {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: .5s, 0s, 0s;
+}
+
+
+.simple-expandmore__to_expand {
+  display: block;
+}
+
+/* This is the hidden state */
+[data-hidden=true].simple-expandmore__to_expand {
+  display: none;
+}
+
+
+/* dropdown examples */
+.dropdown-container {
+  max-width: 19em;
+}
+
+.dropdown-expandmore__button {
+  cursor: pointer;
+  background: #10798E;
+  color: #fff;
+  border: 0;
+  font: inherit;
+  font-size: 1em;
+  padding: .5em 1em;
+  position: relative;
+}
+
+.dropdown-expandmore__button::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  width: .5em;
+  height: .5em;
+  top: 100%;
+  left: calc(50% - .25em);
+  border: .5em solid transparent;
+  border-top: .5em solid #10798E;
+  transition: transform .5s ease;
+  transform-origin: top center;
+  transform: scale(1, 0);
+}
+
+[aria-expanded="true"].dropdown-expandmore__button::after {
+  transform: scale(1, 1);
+}
+
+/* This is the opened state */
+.dropdown-expandmore__to_expand {
+  position: absolute;
+  display: block;
+  opacity: 1;
+  transition: visibility 0s ease, transform .5s ease, opacity .5s ease;
+  transform-origin: top center;
+  transform: scale(1, 1);
+  visibility: visible;
+  transition-delay: 0s;
+  max-width: 19em;
+  padding: 1em;
+  background: #eee;
+}
+
+/* This is the hidden state */
+[data-hidden=true].dropdown-expandmore__to_expand {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1, 0);
+  transition-delay: .5s, 0s, 0s;
+}
+
+/* Another example */
+.simpleplus-expandmore__button {
+  color: #10798E;
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  font: inherit;
+  font-size: 1.4em;
+  border: 0;
+  text-align: left;
+}
+
+.simpleplus-expandmore__symbol:before {
+  content: '+ ';
+}
+
+.simpleplus-expandmore__button[aria-expanded=true]>.simpleplus-expandmore__symbol:before {
+  content: '− ';
+}
+
+.simpleplus-expandmore__to_expand {
+  display: block;
+}
+
+/* This is the hidden state */
+[data-hidden=true].simpleplus-expandmore__to_expand {
+  display: none;
+}
+
+/* if you want to avoid first load display, might use modernizr and add selector before this */
+/*.js-first_load {
+  display: none;
+}*/
+
+
+
+.nhsuk-details__summary::-webkit-details-marker {
+  display: none;
+}
+
+/**
+ * Expander variation.
+ *
+ * 1. !important used because the icon is populated
+ *    by the JavaScript polyfill
+ * 2. Remove the default hover, focus and active
+ *    styles for this component.
+ * 3. -2px left margin to align the icon to the content.
+ * 4. When a group of details is used reduce the
+ *    margin between them so they sit together.
+ */
+
+.nhsuk-expander {
+  background-color: #fff;
+
+  border-bottom: 5px solid #b1b4b6;
+
+  .nhsuk-details__summary {
+    background-color: #fff;
+
+
+    &:before {
+      display: none !important; // sass-lint:disable-line no-important /* [1] */
+    }
+
+    &:hover {
+      .nhsuk-details__summary-text {
+        color: #10798E;
+      }
+
+      cursor: pointer;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      
+     
+    }
+
+  }
+
+  .nhsuk-details__summary-text {
+    background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat; // sass-lint:disable-line quotes
+    background-size: 32px;
+    color: #0b0c0c;
+    font-size: 19px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px 38px;
+    position: relative;
+  }
+
+  .nhsuk-details__text {
+    padding: 4px;
+
+    border-left: 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+}
+
+.nhsuk-expander[open] {
+
+  .nhsuk-details__summary {
+
+    &:focus {
+  
+     
+
+      &:hover {
+        .nhsuk-details__summary-text {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .nhsuk-details__summary-text {
+    background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__minus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23005eb8'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A") left -2px center no-repeat;
+    /* [3] */
+    // sass-lint:disable-line quotes
+    background-size: 32px;
+  }
+
+}
+
+.nhsuk-expander-group {
+  /* [4] */
+
+  >.nhsuk-details {
+    margin-bottom: 2px;
+  }
+
+  margin-bottom: 2px;
+}
+
+.nhsuk-details+%nhsuk-heading-l {
+  margin-bottom: 2px;
+}

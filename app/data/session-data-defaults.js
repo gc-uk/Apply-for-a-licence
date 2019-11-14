@@ -21,5 +21,6 @@ module.exports = {
 
   // Insert values here
 "showcontributor":false,
-"helpEnabled": false
+"helpEnabled": false,
+"js-enabled-summary": true
 }
