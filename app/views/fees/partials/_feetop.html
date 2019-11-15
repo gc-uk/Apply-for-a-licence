@@ -5,7 +5,7 @@
                         <span class="gc-details-summary--right">{% if feeSession.length > 0 %}{{feeSession.length}}
                                 activities selected {% else %}No activities selected{% endif %}</span>
                         <span class="gc-details__summary-text">
-                                Fee summary
+                                Licence activity selections
                         </span>
                 </summary>
                 <div class="gc-details__text">
@@ -32,8 +32,8 @@
                         </dl>
 
 
-                        <a href="/fees/screens/clear" class="govuk-button">Start again</a>      <a href="" class="govuk-button">View full breakdown</a> <a href=""
-                                class="govuk-button gc-pull-right">Start an application</a>
+                        <a href="/fees/screens/clear" class="govuk-button govuk-button--warning govuk-!-margin-bottom-2">Start again</a>       <a href=""
+                                class="govuk-button gc-pull-right  govuk-!-margin-bottom-2">Calculate fees</a>
                         {% else %}
                         <p class="govuk-body">You have not selected any activities</p>
                         {% endif %}

@@ -67,10 +67,15 @@ exports.nonremote_bi_index = function (req, res) {
 
     var feeSession = req.session.data["fees"];
 
-    console.log(feeSession);
+    var feecats = require('../data/feecats.json');
+
+    var activities = feecats.categories.filter(function (value) {
+        return (value.activity === 'Betting intermediary' && value.type === 'Non-remote');
+    });
+
 
     res.render('fees/screens/non-remote/bi', {
-        feeSession
+        feeSession, activities
     });
 }
 

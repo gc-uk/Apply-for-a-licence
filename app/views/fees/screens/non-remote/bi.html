@@ -18,9 +18,9 @@
 
         <nav class="gc-vertical-nav">
             <ul class="gc-vertical-nav__section">
-                    <li class="gc-vertical-nav__section-item">
-                            <a class="gc-vertical-nav__link " href="/fees/screens/">Guidance</a>
-                        </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/">Guidance</a>
+                </li>
                 <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
                     <span class="gc-vertical-nav--count">16</span>
                     <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Non-remote</a>
@@ -54,6 +54,7 @@
 
     <div class="govuk-grid-column-three-quarters">
 
+
         <a href="/fees/screens/non-remote/" class="govuk-back-link">Back</a>
         <h1 class="govuk-heading-l">Betting intermediary</h1>
         <p class="govuk-body">This licence allows you to bring two or more betting parties together so they can bet
@@ -62,87 +63,37 @@
             intermediary is a tic-tac at a racecourse.</p>
 
         <div class="gc-documents-list">
+
+            {% for activity in activities %}
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
-                    <div class="gc-documents-list--doc-name">A1 - Up to &pound;549,999</div>
+                    <div class="gc-documents-list--doc-name">Fee category {{activity.category}}</div>
                     <div class="gc-documents-list--doc-action">
 
-                            {% if feeSession.length > 0 %}
+                        {% if feeSession.length > 0 %}
 
-                            {% for i in feeSession %} 
-                            {% if i.id === 'nr-bi-a1' %}                          
-                                <a href="/fees/screens/remove/nr-bi-a1">Remove from selection</a>
-                            {% else %}
-                            Not available
-                            {% endif %}
-                            {% endfor %}
+                        {% for i in feeSession %}
+                        {% if i.id === activity.id %}
+                        <a href="/fees/screens/remove/{{activity.id}}">Remove from selection</a>
+                        {% else %}
+                        Not available
+                        {% endif %}
+                        {% endfor %}
 
-                            {% else %}
-                            <a href="/fees/screens/add/nr-bi-a1">Add to selection</a>
-                            {% endif %}
+                        {% else %}
+                        <a href="/fees/screens/add/{{activity.id}}">Add to selection</a>
+                        {% endif %}
 
-                        </div>
+                    </div>
                 </div>
                 <div class="gc-documents-list--doc-list">
-                    <div class="gc-documents-list--doc-files">Application fee &pound;178.00</div>
+                     <div class="gc-documents-list--doc-files">Anticipated annual GGY:
+                            &pound;{{activity.min  | numeral("0,0")}} to &pound;{{activity.max | numeral("0,0") }}</div> 
                 </div>
             </div>
-            <div class="gc-documents-list--group">
-                <div class="gc-documents-list--row">
-                    <div class="gc-documents-list--doc-name">B1 - &pound;550,000 to &pound;2,499,999</div>
-                    <div class="gc-documents-list--doc-action">
+            {% endfor %}
 
-                            {% if feeSession.length > 0 %}
-
-                            {% for i in feeSession %} 
-                            {% if i.id === 'nr-bi-b1' %}                          
-                                <a href="/fees/screens/remove/nr-bi-b1">Remove from selection</a>
-                            {% else %}
-                            Not available
-                            {% endif %}
-                            {% endfor %}
-
-                            {% else %}
-                            <a href="/fees/screens/add/nr-bi-b1">Add to selection</a>
-                            {% endif %}
-
-                        </div>
-                </div>
-                <div class="gc-documents-list--doc-list">
-                    <div class="gc-documents-list--doc-files">Application fee &pound;178.00</div>
-                </div>
-            </div>
-            <div class="gc-documents-list--group">
-                <div class="gc-documents-list--row">
-                    <div class="gc-documents-list--doc-name">C1 - &pound;2,500,000 to &pound;5,500,000</div>
-                    <div class="gc-documents-list--doc-action">
-
-                            {% if feeSession.length > 0 %}
-
-                            {% for i in feeSession %} 
-                            {% if i.id === 'nr-bi-c1' %}                          
-                                <a href="/fees/screens/remove/nr-bi-c1">Remove from selection</a>
-                            {% else %}
-                            Not available
-                            {% endif %}
-                            {% endfor %}
-
-                            {% else %}
-                            <a href="/fees/screens/add/nr-bi-c1">Add to selection</a>
-                            {% endif %}
-
-                        </div>
-                </div>
-                <div class="gc-documents-list--doc-list">
-                    <div class="gc-documents-list--doc-files">Application fee &pound;178.00</div>
-                </div>
-            </div>
         </div>
-
-
-
-
-
 
     </div>
 </div>
