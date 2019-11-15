@@ -18,7 +18,9 @@
 
         <nav class="gc-vertical-nav">
             <ul class="gc-vertical-nav__section">
-               
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/">Guidance</a>
+                </li>
                 <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
                     <span class="gc-vertical-nav--count">16</span>
                     <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Non-remote</a>
@@ -68,7 +70,27 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Betting intermediary</div>
-                    <div class="gc-documents-list--doc-action"><a href="/fees/screens/non-remote/bi">Add</a></div>
+
+                    <div class="gc-documents-list--doc-action"><a href="/fees/screens/non-remote/bi">
+
+                            {% if feeSession.length > 0 %}
+
+                            {% for i in feeSession %}
+
+                            {% if i.type === 'Non-remote' and i.activity === 'Betting intermediary' %}
+                            Manage
+                            {% else %}
+                            Add
+                            {% endif %}
+
+                            {% endfor %}
+
+                            {% else %}
+                            Add
+                            {% endif %}
+
+                        </a></div>
+
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">Bring two or more betting parties together so they can bet
@@ -216,7 +238,6 @@
         </div>
 
 
-        {% include "../../partials/_summary.html" %}          
 
     </div>
 </div>

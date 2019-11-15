@@ -9,34 +9,34 @@
         "annual": 280.00,
         "min": 0.00,
         "max": 549999.00,
-        "incompatibleIDs": [{
-            
+        "sameURL": "/fees/screens/non-remote/bi",
+        "incompatibleIDs": [{            
         }] 
     },{
-        "id":"nr-bi-a2",
+        "id":"nr-bi-b1",
         "type": "Non-remote",
         "activity": "Betting intermediary",
-        "category": "A2",
+        "category": "B1",
         "contentfulId": "",
         "appfee": 178.00,
         "annual": 280.00,
         "min": 550000.00,
         "max": 2499999.00,
-        "incompatibleIDs": [{
-            
+        "sameURL": "/fees/screens/non-remote/bi",
+        "incompatibleIDs": [{            
         }] 
     },{
-        "id":"nr-bi-a3",
+        "id":"nr-bi-c1",
         "type": "Non-remote",
         "activity": "Betting intermediary",
-        "category": "A3",
+        "category": "C1",
         "contentfulId": "",
         "appfee": 178.00,
         "annual": 280.00,
         "min": 2500000.00,
         "max": 5500000.00,
-        "incompatibleIDs": [{
-            
+        "sameURL": "/fees/screens/non-remote/bi",
+        "incompatibleIDs": [{            
         }] 
     }]
 }

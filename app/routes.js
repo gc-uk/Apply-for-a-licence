@@ -28,10 +28,14 @@ router.get('/fees/option4/summary', feesController.option4_summary_get);
 // Screens
 router.get('/fees/screens/', feesController.fees_index);
 router.get('/fees/screens/non-remote', feesController.nonremote_index);
+router.get('/fees/screens/non-remote/bi', feesController.nonremote_bi_index);
+
+router.get('/fees/screens/clear', feesController.fees_clear_index);
+
 
 // Add fee to summary
 router.get('/fees/screens/add/:id', feesController.addToSummary);
-
+router.get('/fees/screens/remove/:id', feesController.removeFromSummary);
 
 
 // ID Verification
