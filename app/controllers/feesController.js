@@ -37,9 +37,10 @@ exports.option4_summary_get = function (req, res) {
 exports.fees_index = function (req, res) {
 
     var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
 
     res.render('fees/screens/index', {
-        feeSession
+        feeSession, feeSession2
     });
 }
 
@@ -136,17 +137,14 @@ exports.addToSummary = function (req, res) {
         listOfItems = req.session.data['fees'];
     }
 
-    // Save details in to session and redirect to list
-    let type = req.session.data['settlement-outcome']
-    let activity = req.session.data['amount']
-    let detail = req.session.data['settlement-detail']
-
-    listOfItems.push({
+     listOfItems.push({
         type: feeItem[0].type,
         activity: feeItem[0].activity,
         category: feeItem[0].category,
         id: feeItem[0].id,
-        sameURL: feeItem[0].sameURL
+        sameURL: feeItem[0].sameURL,
+        min: feeItem[0].min,        
+        max: feeItem[0].max
     })
 
     req.session.data['fees'] = listOfItems
@@ -192,3 +190,5 @@ exports.removeFromSummary = function (req, res) {
     return res.redirect(feeItem[0].sameURL)
     
 }
+
+

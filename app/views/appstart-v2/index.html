@@ -1,0 +1,116 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+<!-- <div class=" govuk-width-container">
+    <div class="navigation-service"> <div class="navigation-service-name">Application hub</div>
+        <div class="navigation-service-switch">
+            <a href="#" class="govuk-button" role="button">New application</a>
+        </div>
+    </div>
+</div> -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count  gc-vertical-nav--count--notification">
+                        &#10004;
+                    </span>
+                    <a class="gc-vertical-nav__link " href="/fees/option4/summary">Licence selections</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                </li>
+                <p class="govuk-heading-s">Pre-application</p>
+                <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+
+                    <a class="gc-vertical-nav__link " href="#">Confirm activities</a>
+                </li>
+
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Fees</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">What you'll need</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Getting updates</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                    </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Start application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="govuk-grid-column-three-quarters">
+
+        <h1 class="govuk-heading-l">Confirm activities</h1>
+
+        <p class="govuk-body">You have selected the following activities to apply for: </p>
+
+        <dl class="govuk-summary-list">
+            {% for i in feeSession2 %}
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    {{i.activity}}<br>
+                    <span class="govuk-body-s">{{i.type}}</span>
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span class="govuk-!-font-weight-bold">{{i.category}}</span><br>
+                    <span class="govuk-body-s">GGY band: &pound;{{i.min  | numeral("0,0")}} to
+                        &pound;{{i.max | numeral("0,0") }}</span>
+                </dd>
+                <!-- <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="{{i.sameURL}}">
+                                        Change<span class="govuk-visually-hidden"> name</span>
+                                </a>
+                        </dd> -->
+            </div>
+            {% endfor %}
+        </dl>
+
+        <p class="govuk-body">If these are incorrect, go back and <a href="/fees/screens">change your selections</a> as
+            you can't change them during your application. </p>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">What this page is for</h3>
+        <p class="govuk-body">This page displays notifications which we need a user to action. These include when we
+            need additional document from them for an application, or when someone adds them as a contributor.</p>
+        <h3 class="govuk-heading-m">Known issues</h3>
+        <p class="govuk-body">There are no known issues for this page.</p>
+    </div>
+</div>
+{% endblock %}

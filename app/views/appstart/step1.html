@@ -1,0 +1,106 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/appstart/" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check your selected activities</h1>
+
+        <p class="govuk-body">You are applying for: </p>
+
+        <dl class="govuk-summary-list">
+            {% for i in feeSession2 %}
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    {{i.activity}}<br>
+                    <span class="govuk-body-s">{{i.type}}</span>
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span class="govuk-!-font-weight-bold">{{i.category}}</span><br>
+                    <span class="govuk-body-s">GGY band: &pound;{{i.min  | numeral("0,0")}} to
+                        &pound;{{i.max | numeral("0,0") }}</span>
+                </dd>
+                <!-- <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="{{i.sameURL}}">
+                                        Change<span class="govuk-visually-hidden"> name</span>
+                                </a>
+                        </dd> -->
+            </div>
+            {% endfor %}
+        </dl>
+
+        <p class="govuk-body">If these are incorrect, go back and <a href="/fees/screens">change your selections</a> as
+            you can't change them during your application. </p>
+
+            <h2 class="govuk-heading-m">Fee due on application</h2>
+
+            <p class="govuk-body">You will need to pay <span class="govuk-!-font-weight-bold">£3,837.50</span> when you submit your application.</p>
+         
+            <h2 class="govuk-heading-m">Fees due in future</h2>
+
+            <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Fee due</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                     
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">30 days from licence issue</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">£11,943.94</td>
+                      </tr>
+                      
+                      <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">1 year from licence issue</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">£15,274.10</td>
+                          </tr>
+                    </tbody>
+                  </table>
+
+                  <p class="govuk-body">All fees must be paid using credit or debit card.</p>
+
+                  <p class="govuk-body">Fees correct as of {{date | date('DD MMMM YYYY')}}</p>
+
+                  <a href="/appstart/step2" class="govuk-button">Continue</a>
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">What this page is for</h3>
+        <p class="govuk-body">This page displays applications that have been started but not yet paid and submitted.
+            Clicking on the applicant name will take the user to the outstanding tasks for the application.</p>
+        <h3 class="govuk-heading-m">Known issues</h3>
+        <p class="govuk-body">There are no known issues for this page.</p>
+    </div>
+</div>
+{% endblock %}

@@ -54,4 +54,11 @@ router.get('/applicationhub/v2/hub-with-contributor', apphubccontroller.hub_with
 router.get('/applicationhub/v3/hub-with-contributor', apphubccontroller.hub_with_contributor3_get);
 
 router.get('/applicationhub/v2/hub-with-apps-submitted', apphubccontroller.hub_with_apps_submitted_get);
+
+
+router.get('/appstart/', apphubccontroller.appstart_index);
+router.get('/appstart/step1', apphubccontroller.step1);
+
+
+router.get('/appstart-v2/', apphubccontroller.appstart_v2_index);
 module.exports = router

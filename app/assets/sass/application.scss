@@ -444,6 +444,8 @@
     margin-top: 0;
   }
 
+
+
 }
 
 /**
@@ -619,3 +621,11 @@ border-bottom:0px;
   border-style: solid;
   border-color: black transparent transparent transparent;
 }
+
+.gc-summary__wrap:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.gc-vertical-nav--count--success{background: #00703c;}

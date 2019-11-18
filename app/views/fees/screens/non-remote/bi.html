@@ -41,13 +41,14 @@
                     <span class="gc-vertical-nav--count">2</span>
                     <a class="gc-vertical-nav__link " href="/fees/screens/personal">Personal licences</a>
                 </li>
+                {% if feeSession2.length > 0 %}
                 <li class="gc-vertical-nav__section-item">
-                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                    </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link" href="/fees/option4/summary">Summary</a>
                 </li>
-                <p class="govuk-heading-s">Tools</p>
-                <li class="gc-vertical-nav__section-item">
-                    <a class="gc-vertical-nav__link " href="/fees/screens/">GGY</a>
-                </li>
+                {% endif %}
             </ul>
         </nav>
     </div>

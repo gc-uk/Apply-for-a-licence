@@ -10,15 +10,68 @@ Calculate Gross Gambling Yield
 {% block heroContent %}
 {% endblock %}
 
+{% block beforeContent %}
+<a href="/fees/screens/" class="govuk-back-link">Back</a>
+{% endblock %}
+
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Gambling licence fee calculation</h1>
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item">
+                        <span class="gc-vertical-nav--count  gc-vertical-nav--count--notification">
+                                &#10004;
+                            </span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/">Activity selection</a>
+                </li>
+                 <li class="gc-vertical-nav__section-item">
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                    </li>
+                <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
+           
+                    <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Fee summary</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/ancillary">Application fee</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/linked">First annual fee</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/remote">Annual fee</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                    </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/personal">Apply</a>
+                </li>
+               
+            </ul>
+        </nav>
     </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+            <h1 class="govuk-heading-l">Licence fee summary</h1>
+
+
+            {% include "../partials/_appFeeBlue-withoutbutton.html" %}
+
+
+            <div class="govuk-grid-row">
+
+                    <div class="govuk-grid-column-one-half">
+            {% include "../partials/_firstannual.html" %}
 </div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <div class="gc-section-panel--grey govuk-!-padding-2">
+            <div class="govuk-grid-column-one-half">
+            {% include "../partials/_annual.html" %}
+        </div>
+    </div>
+    <!-- <div class="gc-section-panel--grey govuk-!-padding-2">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-half">
 
@@ -30,7 +83,7 @@ Calculate Gross Gambling Yield
                         <p class="govuk-body-s govuk-!-margin-bottom-3">You need to pay this when submitting your
                             application</p>
 
-                        <a href="" class="govuk-button  govuk-!-margin-bottom-0">Start application</a>
+                        <a href="/appstart-v2/" class="govuk-button  govuk-!-margin-bottom-0">Start application</a>
 
                     </div>
 
@@ -58,16 +111,8 @@ Calculate Gross Gambling Yield
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> -->
 
-
-
-</div>
-
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
         <h2 class="govuk-heading-m govuk-!-margin-top-4">Application fee breakdown</h2>
@@ -328,8 +373,17 @@ Calculate Gross Gambling Yield
                 </tr>
             </tbody>
         </table>
+
+        
+        <a href="" class="govuk-button  gc-pull-right">Print</a>
+
     </div>
+
+
 </div>
+
+
+
 
 
 {% endblock %}

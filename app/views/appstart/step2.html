@@ -1,0 +1,63 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/appstart/step1" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">What you'll need for this application</h1>
+
+    <p class="govuk-body">You will need to provide the following evidence as part of this application. </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Document 1</li>
+      <li>Document 2</li>
+      <li>Document 3</li>
+      <li>Document 4</li>
+      <li>Information 1</li>
+      <li>Information 2</li>
+      <li>Information 3</li>
+      <li>Information 4</li>
+    </ul>
+
+    <p class="govuk-body">This information is repeated in the application so you can refer to it again.</p>
+
+    <a href="/appstart/step3" class="govuk-button">Continue</a> <a href="#" class="govuk-button govuk-button--secondary">Print this list</a> 
+
+  </div>
+
+
+
+</div>
+
+
+
+{% endblock %}
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-m">What this page is for</h3>
+    <p class="govuk-body">This page displays applications that have been started but not yet paid and submitted.
+      Clicking on the applicant name will take the user to the outstanding tasks for the application.</p>
+    <h3 class="govuk-heading-m">Known issues</h3>
+    <p class="govuk-body">There are no known issues for this page.</p>
+  </div>
+</div>
+{% endblock %}

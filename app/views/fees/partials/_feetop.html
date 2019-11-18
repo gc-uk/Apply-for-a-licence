@@ -2,11 +2,14 @@
 <div class=" govuk-width-container">
         <details class="gc-details gc-expander">
                 <summary class="gc-details__summary">
-                        <span class="gc-details-summary--right">{% if feeSession2.length > 0 %}{{feeSession2.length}}
-                                activities selected {% else %}No activities selected{% endif %}</span>
-                        <span class="gc-details__summary-text">
+                                <div class="gc-summary__wrap">
+                           <span class="gc-details__summary-text">
                                 Licence activity selections
-                        </span>
+                        </span> 
+                      
+                         <span class="gc-details-summary--right govuk-!-font-weight-bold">{% if feeSession2.length > 0 %}{{feeSession2.length}}
+                                        {{ 'activities' if feeSession2.length > 1 else 'activity' }} selected {% else %}No activities selected{% endif %}</span>
+                 </div>
                 </summary>
                 <div class="gc-details__text">
                         {% if feeSession2.length > 0 %}
@@ -20,7 +23,8 @@
                                                 <span class="govuk-body-s">{{i.type}}</span>
                                         </dt>
                                         <dd class="govuk-summary-list__value">
-                                                {{i.category}}
+                                                <span class="govuk-!-font-weight-bold">{{i.category}}</span><br>
+                                                <span class="govuk-body-s">GGY band:  &pound;{{i.min  | numeral("0,0")}} to &pound;{{i.max | numeral("0,0") }}</span>
                                         </dd>
                                         <dd class="govuk-summary-list__actions">
                                                 <a class="govuk-link" href="{{i.sameURL}}">
@@ -31,9 +35,9 @@
                                 {% endfor %}
                         </dl>
 
-
+<div class="govuk-form-group govuk-!-margin-bottom-0">
                         <a href="/fees/screens/clear" class="govuk-button govuk-button--warning govuk-!-margin-bottom-2">Start again</a>       <a href="/fees/option4/summary"
-                                class="govuk-button gc-pull-right  govuk-!-margin-bottom-2">Calculate fees</a>
+                                class="govuk-button gc-pull-right  govuk-!-margin-bottom-2">Calculate fees</a></div>
                         {% else %}
                         <p class="govuk-body">You have not selected any activities</p>
                         {% endif %}

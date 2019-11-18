@@ -46,3 +46,39 @@ exports.hub_with_contributor3_get = function (req, res) {
 
     res.render('applicationhub/v3/hub-with-contributor', {appdata});
 }
+
+exports.appstart_index = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    console.log(feeSession);
+
+    res.render('appstart/index', {
+        feeSession, feeSession2
+    });
+}
+
+exports.step1 = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    console.log(feeSession);
+
+    res.render('appstart/step1', {
+        feeSession, feeSession2
+    });
+}
+
+exports.appstart_v2_index = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    console.log(feeSession);
+
+    res.render('appstart-v2/index', {
+        feeSession, feeSession2
+    });
+}
