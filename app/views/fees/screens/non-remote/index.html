@@ -53,6 +53,10 @@
     </div>
 
     <div class="govuk-grid-column-three-quarters">
+
+
+
+
         <h1 class="govuk-heading-l">Non-remote activities</h1>
         <p class="govuk-body">There isn't a single page on the GC website which says what non-remote means. We need to
             fix this!</p>
@@ -60,7 +64,30 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Adult gaming centre</div>
-                    <div class="gc-documents-list--doc-action"><a href="/fees/screens/non-remote/agc">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="/fees/screens/non-remote/agc">
+
+                            {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Adult gaming centre'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+
+                            {{ linkText }}
+
+
+
+                        </a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">This licence is for adult gaming centres, often called
@@ -73,21 +100,23 @@
 
                     <div class="gc-documents-list--doc-action"><a href="/fees/screens/non-remote/bi">
 
+                            {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
                             {% if feeSession.length > 0 %}
-
                             {% for i in feeSession %}
-
-                            {% if i.type === 'Non-remote' and i.activity === 'Betting intermediary' %}
-                            Manage
-                            {% else %}
-                            Add
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Betting intermediary'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
                             {% endif %}
-
+                            {% endif %}
                             {% endfor %}
-
-                            {% else %}
-                            Add
                             {% endif %}
+
+                            {{ linkText }}
+
+
 
                         </a></div>
 
@@ -100,7 +129,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Bingo</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Bingo'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -110,7 +153,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Casino 1968</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Casino 1968'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -119,7 +176,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Casino 2005</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Casino 2005'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -128,7 +199,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">External lottery manager</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='External lottery manager'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -137,7 +222,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Family entertainment centre</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Family entertainment centre'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -146,7 +245,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Gambling software</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Gambling software'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -156,7 +269,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Gaming machine technical (Full)</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Gaming machine technical (Full)'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -166,7 +293,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Gaming machine technical (Software)</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Gaming machine technical (Software)'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -176,7 +317,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Gaming machine technical (Supplier)</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Gaming machine technical (Supplier)'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -186,7 +341,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">General betting limited</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='General betting limited'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -196,7 +365,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">General betting standard</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='General betting standard'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -207,7 +390,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">General betting standard (no gaming machines)</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">     {% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='General betting standard (no gaming machines)'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -219,7 +416,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Pool betting</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">{% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Pool betting'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>
@@ -229,7 +440,21 @@
             <div class="gc-documents-list--group">
                 <div class="gc-documents-list--row">
                     <div class="gc-documents-list--doc-name">Society lottery</div>
-                    <div class="gc-documents-list--doc-action"><a href="">Add</a></div>
+                    <div class="gc-documents-list--doc-action"><a href="">{% set breakLoop = false %}
+                            {% set linkText = 'Add' %}
+
+                            {% if feeSession.length > 0 %}
+                            {% for i in feeSession %}
+                            {% if breakLoop === false %}
+                            {% if i.activity ==='Society lottery'%}
+                            {% set breakLoop = true %}
+                            {% set linkText = 'Change' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {{ linkText }}</a></div>
                 </div>
                 <div class="gc-documents-list--doc-list">
                     <div class="gc-documents-list--doc-files">...</div>

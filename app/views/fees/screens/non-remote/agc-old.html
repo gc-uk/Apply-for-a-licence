@@ -1,0 +1,147 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% include "../../partials/_feetop.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                    <li class="gc-vertical-nav__section-item">
+                            <a class="gc-vertical-nav__link " href="/fees/screens/">Guidance</a>
+                        </li>
+                <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count">16</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Non-remote</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">10</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/ancillary">Ancillary</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">4</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/linked">Linked licence</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">19</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/remote">Remote</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <span class="gc-vertical-nav--count">2</span>
+                    <a class="gc-vertical-nav__link " href="/fees/screens/personal">Personal licences</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                </li>
+                <p class="govuk-heading-s">Tools</p>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/screens/">GGY</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+            <a href="/fees/screens/non-remote/" class="govuk-back-link">Back</a>
+        <h1 class="govuk-heading-l">Adult gaming centre</h1>
+        <p class="govuk-body">This licence is for adult gaming centres, often called arcades.</p>
+        <p class="govuk-body">It allows you to offer an unlimited number of category C and D gaming machines and up to
+            20% of your total number of machines, can be of category B3 or B4.</p>
+        <p class="govuk-body">Your premises is for those aged 18 and over only. </p>
+
+            <form action="addfees" method="POST">
+
+                    <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                <h2 class="govuk-fieldset__heading">
+                                 Categories
+                                </h2>
+                              </legend>
+                              <div class="govuk-radios  govuk-radios--small">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                    A1 - Up to &pound;199,999
+                                  </label>
+                                  <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                       Application fee &pound;879.
+                                      </span>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                        A2 - &pound;200,000 to &pound;749,999
+                                  </label>
+                                  <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                        Application fee &pound;879.
+                                       </span>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                        A3 - &pound;750,000 to &pound;1,249,999
+                                  </label>
+                                  <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                        Application fee &pound;879.
+                                       </span>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                                        B1 - &pound;1,250,000 to &pound;1,999,999
+                                  </label>
+                                  <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                        Application fee &pound;879.
+                                       </span>
+                                </div>
+                                <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                                             ...
+                                        </label>
+                                        <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                              ...
+                                             </span>
+                                      </div>
+                              </div>
+                            </fieldset>
+                          </div>
+
+                          <button class="govuk-button" data-module="govuk-button">
+                                Add to selection and continue
+                              </button>
+
+            </form>
+ 
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">What this page is for</h3>
+        <p class="govuk-body">This page displays applications that have been started but not yet paid and submitted.
+            Clicking on the applicant name will take the user to the outstanding tasks for the application.</p>
+        <h3 class="govuk-heading-m">Known issues</h3>
+        <p class="govuk-body">There are no known issues for this page.</p>
+    </div>
+</div>
+{% endblock %}

@@ -2,17 +2,17 @@
 <div class=" govuk-width-container">
         <details class="gc-details gc-expander">
                 <summary class="gc-details__summary">
-                        <span class="gc-details-summary--right">{% if feeSession.length > 0 %}{{feeSession.length}}
+                        <span class="gc-details-summary--right">{% if feeSession2.length > 0 %}{{feeSession2.length}}
                                 activities selected {% else %}No activities selected{% endif %}</span>
                         <span class="gc-details__summary-text">
                                 Licence activity selections
                         </span>
                 </summary>
                 <div class="gc-details__text">
-                        {% if feeSession.length > 0 %}
+                        {% if feeSession2.length > 0 %}
 
                         <dl class="govuk-summary-list">
-                                {% for i in feeSession %}
+                                {% for i in feeSession2 %}
 
                                 <div class="govuk-summary-list__row">
                                         <dt class="govuk-summary-list__key">
@@ -32,7 +32,7 @@
                         </dl>
 
 
-                        <a href="/fees/screens/clear" class="govuk-button govuk-button--warning govuk-!-margin-bottom-2">Start again</a>       <a href=""
+                        <a href="/fees/screens/clear" class="govuk-button govuk-button--warning govuk-!-margin-bottom-2">Start again</a>       <a href="/fees/option4/summary"
                                 class="govuk-button gc-pull-right  govuk-!-margin-bottom-2">Calculate fees</a>
                         {% else %}
                         <p class="govuk-body">You have not selected any activities</p>

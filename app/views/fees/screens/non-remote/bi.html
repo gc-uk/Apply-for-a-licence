@@ -62,38 +62,7 @@
         <p class="govuk-body">An example of a non-remote betting
             intermediary is a tic-tac at a racecourse.</p>
 
-        <div class="gc-documents-list">
-
-            {% for activity in activities %}
-            <div class="gc-documents-list--group">
-                <div class="gc-documents-list--row">
-                    <div class="gc-documents-list--doc-name">Fee category {{activity.category}}</div>
-                    <div class="gc-documents-list--doc-action">
-
-                        {% if feeSession.length > 0 %}
-
-                        {% for i in feeSession %}
-                        {% if i.id === activity.id %}
-                        <a href="/fees/screens/remove/{{activity.id}}">Remove from selection</a>
-                        {% else %}
-                        Not available
-                        {% endif %}
-                        {% endfor %}
-
-                        {% else %}
-                        <a href="/fees/screens/add/{{activity.id}}">Add to selection</a>
-                        {% endif %}
-
-                    </div>
-                </div>
-                <div class="gc-documents-list--doc-list">
-                     <div class="gc-documents-list--doc-files">Anticipated annual GGY:
-                            &pound;{{activity.min  | numeral("0,0")}} to &pound;{{activity.max | numeral("0,0") }}</div> 
-                </div>
-            </div>
-            {% endfor %}
-
-        </div>
+            {% include "../../partials/_options.html" %}
 
     </div>
 </div>

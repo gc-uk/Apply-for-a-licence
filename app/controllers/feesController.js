@@ -55,17 +55,19 @@ exports.fees_clear_index = function (req, res) {
 exports.nonremote_index = function (req, res) {
 
     var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
 
     console.log(feeSession);
 
     res.render('fees/screens/non-remote/index', {
-        feeSession
+        feeSession, feeSession2
     });
 }
 
 exports.nonremote_bi_index = function (req, res) {
 
     var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
 
     var feecats = require('../data/feecats.json');
 
@@ -73,9 +75,42 @@ exports.nonremote_bi_index = function (req, res) {
         return (value.activity === 'Betting intermediary' && value.type === 'Non-remote');
     });
 
+    if(feeSession !== undefined){
+    feeSession = feeSession.filter(function (value) {
+        return (value.activity === 'Betting intermediary' && value.type === 'Non-remote');
+    });
+    
+    req.session.data["vfees"] = feeSession;
+    }
 
     res.render('fees/screens/non-remote/bi', {
-        feeSession, activities
+        feeSession, activities, feeSession2
+    });
+}
+
+exports.nonremote_agc_index = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    var feecats = require('../data/feecats.json');
+
+    var activities = feecats.categories.filter(function (value) {
+        return (value.activity === 'Adult gaming centre' && value.type === 'Non-remote');
+    });
+
+if(feeSession !== undefined){
+
+    feeSession = feeSession.filter(function (value) {
+        return (value.activity === 'Adult gaming centre' && value.type === 'Non-remote');
+    });
+    
+    req.session.data["vfees"] = feeSession;
+}
+
+
+    res.render('fees/screens/non-remote/agc', {
+        feeSession, activities, feeSession2
     });
 }
 

@@ -29,6 +29,7 @@ router.get('/fees/option4/summary', feesController.option4_summary_get);
 router.get('/fees/screens/', feesController.fees_index);
 router.get('/fees/screens/non-remote', feesController.nonremote_index);
 router.get('/fees/screens/non-remote/bi', feesController.nonremote_bi_index);
+router.get('/fees/screens/non-remote/agc', feesController.nonremote_agc_index);
 
 router.get('/fees/screens/clear', feesController.fees_clear_index);
 

@@ -1,5 +1,35 @@
 {
     "categories": [{
+        "q": "agc",
+        "id":"nr-agc-a1",
+        "type": "Non-remote",
+        "activity": "Adult gaming centre",
+        "category": "A1",
+        "contentfulId": "",
+        "appfee": 879.00,
+        "annual": 1314.00,
+        "min": 0.00,
+        "max": 200000.00,
+        "sameURL": "/fees/screens/non-remote/agc",
+        "incompatibleIDs": [{            
+        }] 
+    },{
+        "q": "agc",
+        "id":"nr-agc-a2",
+        "type": "Non-remote",
+        "activity": "Adult gaming centre",
+        "category": "A2",
+        "contentfulId": "",
+        "appfee": 879.00,
+        "annual": 1370.00,
+        "min": 200000.00,
+        "max": 749999.00,
+        "sameURL": "/fees/screens/non-remote/agc",
+        "incompatibleIDs": [{            
+        }] 
+    },
+        {
+        "q": "bi",
         "id":"nr-bi-a1",
         "type": "Non-remote",
         "activity": "Betting intermediary",
@@ -13,6 +43,7 @@
         "incompatibleIDs": [{            
         }] 
     },{
+        "q": "bi",
         "id":"nr-bi-b1",
         "type": "Non-remote",
         "activity": "Betting intermediary",
@@ -26,6 +57,7 @@
         "incompatibleIDs": [{            
         }] 
     },{
+        "q": "bi",
         "id":"nr-bi-c1",
         "type": "Non-remote",
         "activity": "Betting intermediary",

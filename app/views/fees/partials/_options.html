@@ -1,0 +1,56 @@
+<div class="gc-documents-list">
+
+    {% for activity in activities %}
+    <div class="gc-documents-list--group">
+        <div class="gc-documents-list--row">
+            <div class="gc-documents-list--doc-name">Fee category {{activity.category}}</div>
+            <div class="gc-documents-list--doc-action">
+
+
+
+                {% if feeSession.length === 0 or feeSession === undefined %}
+                <a href="/fees/screens/add/{{activity.id}}">Add to selection</a>
+                {% endif %}
+
+
+
+
+
+             
+                {% if feeSession.length > 0 %}
+
+               
+
+                    {% for sessionItem in feeSession %}
+
+                        {% if activity.id === sessionItem.id %}
+
+                        <a href="/fees/screens/remove/{{activity.id}}">Remove from selection</a>
+
+                        {% elseif activity.id !== sessionItem.id and activity.type === sessionItem.type and activity.activity === sessionItem.activity %}
+                        
+                        Not available
+                        
+                        {% elseif activity.type === sessionItem.type and activity.activity !== sessionItem.activity %}
+                        
+                        <a href="/fees/screens/add/{{activity.id}}">Add to selection </a>
+                        
+                        {% endif %}
+
+
+                    {% endfor%}
+
+
+                {% endif %}
+
+
+            </div>
+        </div>
+        <div class="gc-documents-list--doc-list">
+            <div class="gc-documents-list--doc-files">Anticipated annual GGY:
+                &pound;{{activity.min  | numeral("0,0")}} to &pound;{{activity.max | numeral("0,0") }}</div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
