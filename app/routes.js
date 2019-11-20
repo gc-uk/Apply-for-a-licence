@@ -61,4 +61,9 @@ router.get('/appstart/step1', apphubccontroller.step1);
 
 
 router.get('/appstart-v2/', apphubccontroller.appstart_v2_index);
+router.get('/appstart-v2/activity', apphubccontroller.appstart_v2_activity);
+router.get('/appstart-v2/need', apphubccontroller.appstart_v2_need);
+router.get('/appstart-v2/updates', apphubccontroller.appstart_v2_updates);
+router.get('/appstart-v2/start', apphubccontroller.appstart_v2_start);
+
 module.exports = router

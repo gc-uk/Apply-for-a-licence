@@ -1,0 +1,111 @@
+{% extends "layout-app-authenticated-v2.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What type of business are you looking to run?
+          </h1>
+        </legend>
+        <span id="waste-hint" class="govuk-hint">
+          Select all that apply.
+        </span>
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              Bricks and mortar / Premises-based gambling
+            </label>
+            <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+              For example: Betting shop, bingo hall, casino, arcades
+            </span>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              Racetrack / sports venue
+            </label>
+            <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+              For example: Dog track, racecourse or stadium
+            </span>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Online / Internet / Digital
+            </label>
+            <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+              For example: though apps, the internet or on TV
+            </span>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Create or sell gambling software
+            </label>
+            <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+              For example: Game developer, reseller
+            </span>
+          </div>
+          <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Build / maintain or sell machines
+              </label>
+              <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                For example: fruit machines, betting terminals
+              </span>
+            </div>
+            
+          <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Run or manage a lottery
+              </label>
+              <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                For example: charity, local authority or for good causes
+              </span>
+            </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+  </div>
+
+</div>
+
+
+
+{% endblock %}
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-m">What this page is for</h3>
+    <p class="govuk-body">This page displays applications that have been started but not yet paid and submitted.
+      Clicking on the applicant name will take the user to the outstanding tasks for the application.</p>
+    <h3 class="govuk-heading-m">Known issues</h3>
+    <p class="govuk-body">There are no known issues for this page.</p>
+  </div>
+</div>
+{% endblock %}

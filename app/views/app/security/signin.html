@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-app-anon.html" %}
 
 {% block pageTitle %}
 {% endblock %}
@@ -13,11 +13,9 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Sign in</h1>
+        <h1 class="govuk-heading-l">Sign in to Apply for a licence</h1>
 
-        <p class="govuk-body">Enter your email address and we'll send you a code which you'll need to enter on the next screen.</p>
-        <p class="govuk-body">If you have a mobile number registered registered on your account, we'll also send the same code to your mobile.</p>
-
+     
         <form>
             <div class="govuk-form-group">
                 <label class="govuk-label" for="email">
@@ -26,13 +24,20 @@
                 <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
             </div>
 
-            <a class="govuk-button" data-module="govuk-button" href="code">
-                Send code and continue
-            </a>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="password">
+                    Password
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="password" name="password" type="password">
+            </div>
 
             <p class="govuk-body">
-                <a class="govuk-link" href="createaccount">Create an account</a>
+                <a class="govuk-link" href="/app/security/create-account">Create an account</a>
             </p>
+
+            <button class="govuk-button" data-module="govuk-button">
+                    Sign in
+                  </button>
         </form>
 
         <h2 class="govuk-heading-m">Problems signing in</h2>

@@ -31,22 +31,22 @@ Calculate Gross Gambling Yield
                     </li>
                 <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
            
-                    <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Fee summary</a>
+                    <a class="gc-vertical-nav__link " href="/fees/option4/summary">Fee summary</a>
+             </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/fees/option4/summary#ap">Application fee</a>
                 </li>
                 <li class="gc-vertical-nav__section-item">
-                    <a class="gc-vertical-nav__link " href="/fees/screens/ancillary">Application fee</a>
+                    <a class="gc-vertical-nav__link " href="/fees/option4/summary#fa">First annual fee</a>
                 </li>
                 <li class="gc-vertical-nav__section-item">
-                    <a class="gc-vertical-nav__link " href="/fees/screens/linked">First annual fee</a>
-                </li>
-                <li class="gc-vertical-nav__section-item">
-                    <a class="gc-vertical-nav__link " href="/fees/screens/remote">Annual fee</a>
-                </li>
+                    <a class="gc-vertical-nav__link " href="/fees/option4/summary#an">Annual fee</a>
+                </li>   
                 <li class="gc-vertical-nav__section-item">
                         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
                     </li>
                 <li class="gc-vertical-nav__section-item">
-                    <a class="gc-vertical-nav__link " href="/appstart-v2/">Apply</a>
+                    <a class="gc-vertical-nav__link " href="/appstart-v2/">Apply for this licence</a>
                 </li>
                
             </ul>
@@ -58,7 +58,7 @@ Calculate Gross Gambling Yield
             <h1 class="govuk-heading-l">Licence fee summary</h1>
 
 
-            {% include "../partials/_appFeeBlue-withoutbutton.html" %}
+            {% include "../partials/_appFeeBlue.html" %}
 
 
             <div class="govuk-grid-row">
@@ -114,7 +114,7 @@ Calculate Gross Gambling Yield
 
         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-        <h2 class="govuk-heading-m govuk-!-margin-top-4">Application fee breakdown</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-top-4" id="ap">Application fee breakdown</h2>
 
         <p class="">Fees are due on the submission of the licence application.</p>
         <table class="govuk-table">
@@ -245,7 +245,7 @@ Calculate Gross Gambling Yield
 
 
 
-        <h2 class="govuk-heading-m govuk-!-margin-top-4">First annual fee breakdown</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-top-4" id="fa">First annual fee breakdown</h2>
 
         <table class="govuk-table">
 
@@ -328,7 +328,7 @@ Calculate Gross Gambling Yield
         </table>
 
 
-        <h2 class="govuk-heading-m govuk-!-margin-top-4">Annual fee calculation</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-top-4" id="an">Annual fee calculation</h2>
 
         <table class="govuk-table">
             <thead class="govuk-table__head">
@@ -373,8 +373,8 @@ Calculate Gross Gambling Yield
             </tbody>
         </table>
 
-        
-        <a href="" class="govuk-button">Print</a>
+        <a href="/appstart-v2/" class="govuk-button">Continue to apply for this licence</a>
+        <a href="" class="govuk-button gc-pull-right">Print</a>
 
     </div>
 

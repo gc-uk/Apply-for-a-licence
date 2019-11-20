@@ -82,3 +82,52 @@ exports.appstart_v2_index = function (req, res) {
         feeSession, feeSession2
     });
 }
+
+exports.appstart_v2_activity = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    console.log(feeSession);
+
+    res.render('appstart-v2/activity', {
+        feeSession, feeSession2
+    });
+}
+exports.appstart_v2_need = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    console.log(feeSession);
+
+    res.render('appstart-v2/need', {
+        feeSession, feeSession2
+    });
+}
+
+exports.appstart_v2_updates = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    console.log(feeSession);
+
+    res.render('appstart-v2/updates', {
+        feeSession, feeSession2
+    });
+}
+
+exports.appstart_v2_start = function (req, res) {
+
+    var feeSession = req.session.data["fees"];
+    var feeSession2 = req.session.data["fees"];
+
+    console.log(feeSession);
+
+    res.render('appstart-v2/start', {
+        feeSession, feeSession2
+    });
+}
+
+

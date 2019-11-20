@@ -8,12 +8,12 @@
 
 {% block heroContent %}
 <!-- <div class=" govuk-width-container">
-    <div class="navigation-service"> <div class="navigation-service-name">Application hub</div>
-        <div class="navigation-service-switch">
-            <a href="#" class="govuk-button" role="button">New application</a>
+        <div class="navigation-service"> <div class="navigation-service-name">Application hub</div>
+            <div class="navigation-service-switch">
+                <a href="#" class="govuk-button" role="button">New application</a>
+            </div>
         </div>
-    </div>
-</div> -->
+    </div> -->
 {% endblock %}
 
 {% block content %}
@@ -34,24 +34,26 @@
                 <li class="gc-vertical-nav__section-item">
                     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
                 </li>
-                <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                <p class="govuk-heading-s">Pre-application</p>
+                <li class="gc-vertical-nav__section-item">
 
                     <a class="gc-vertical-nav__link " href="/appstart-v2/">Before you start</a>
                 </li>
 
-                <li class="gc-vertical-nav__section-item ">
+                <li class="gc-vertical-nav__section-item">
                     <a class="gc-vertical-nav__link " href="/appstart-v2/activity">Activities and fees</a>
                 </li>
-                <li class="gc-vertical-nav__section-item ">
+                <li class="gc-vertical-nav__section-item">
                     <a class="gc-vertical-nav__link " href="/appstart-v2/need">What you'll need</a>
                 </li>
-                <li class="gc-vertical-nav__section-item ">
+                <li class="gc-vertical-nav__section-item   ">
                     <a class="gc-vertical-nav__link " href="/appstart-v2/updates">Getting updates</a>
                 </li>
                 <li class="gc-vertical-nav__section-item">
                     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
                 </li>
-                <li class="gc-vertical-nav__section-item ">
+
+                <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
                     <a class="gc-vertical-nav__link " href="/appstart-v2/start">Start application</a>
                 </li>
             </ul>
@@ -61,22 +63,29 @@
 
     <div class="govuk-grid-column-three-quarters">
 
-        <h1 class="govuk-heading-l">Before you start your application</h1>
+        <h1 class="govuk-heading-l">Confirm and start your application</h1>
 
-        <p class="govuk-body">We need you to check what you've selected, and understand what you'll need to pay and
-            when.
-        </p>
-        <p class="govuk-body">We'll also go through some of the details you'll need to be able to submit an application,
-            so you can get these ready.
-        </p>
+        <p class="govuk-body">Once you start your application, you won't be able to change the activities you have
+            selected.</p>
 
-        <p class="govuk-body">Once you start an application, you can save and return to it at any time. There are no
-            time limits on completing an application.</p>
+            <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                      <span class="govuk-warning-text__assistive">Warning</span>
+                     If you need to change the activities selected, you'll need to start a new application.
+                    </strong>
+                  </div>
 
- 
+                  <h2 class="govuk-heading-m">I confirm that:</h2>
 
-        <a href="/appstart-v2/activity" class="govuk-button">Continue</a>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>I have read an understood the guidance provided</li>
+                      <li>The activities I have selected are correct</li>
+                      <li>I understand the fees I am required to pay and when</li>
+                  </ul>
 
+
+        <a href="/appstart-v2/start" class="govuk-button govuk-button--start govuk-!-margin-top-3">Start application</a>
 
     </div>
 

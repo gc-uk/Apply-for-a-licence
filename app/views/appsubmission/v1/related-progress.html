@@ -1,0 +1,92 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Application
+                        hub</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                </li>
+                <li class="gc-vertical-nav__section-item  ">
+                    <a class="gc-vertical-nav__link " href="/appsubmission/v1/progress-with-docs">Application
+                        progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count">3</span>
+                    <a class="gc-vertical-nav__link " href="/appsubmission/v1/related">Related applications</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="/appsubmission/v1/related">Additional
+                        information</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Print application</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="#">Withdraw application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+            <a href="/appsubmission/v1/related" class="govuk-back-link">Back</a>
+        <h1 class="govuk-heading-l">Related application progress</h1>
+
+        <p class="govuk-body">The following applications were created in addition to your operator licence application.
+        </p>
+
+        <div class="timeline">
+            <ul>
+
+
+                <li>
+                    <h2 class="govuk-heading-m">Application created</h2>
+                    <p class="time">20 December 2019 at 9:06am</p>
+                    <p>Application reference: PML-123456<br>Applicant: Peter Parker<br>Application type: Personal
+                        management licence</p>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

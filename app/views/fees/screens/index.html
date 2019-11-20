@@ -22,6 +22,9 @@
                     <a class="gc-vertical-nav__link " href="/fees/screens/">Guidance</a>
                 </li>
                 <li class="gc-vertical-nav__section-item">
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                    </li>
+                <li class="gc-vertical-nav__section-item">
                     <span class="gc-vertical-nav--count">16</span>
                     <a class="gc-vertical-nav__link " href="/fees/screens/non-remote">Non-remote</a>
                 </li>
@@ -46,6 +49,7 @@
                         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
                     </li>
                 <li class="gc-vertical-nav__section-item ">
+                        <span class="gc-vertical-nav--count">{{feeSession2.length}}</span>
                     <a class="gc-vertical-nav__link" href="/fees/option4/summary">Summary</a>
                 </li>
                 {% endif %}
@@ -60,17 +64,26 @@
 
         <h1 class="govuk-heading-l">Find out how much a gambling licence will cost</h1>
         <p class="govuk-body">Use this calculator to find out how much a gambling licence will cost.</p>
-        <div class="govuk-inset-text">
 
-            <p class="govuk-body">We must not be in a position where we need to tell people how to use this.</p>
+        <p class="govuk-body">If you are unsure what license activites you may need or what they allow you to do, you can use the <a href="">What licence do I need?</a> service.</p>
+        
 
-            <p class="govuk-body">See how this works first before we consider writing content to tell people how to use
-                it!
-            </p>
-        </div>
+        <p class="govuk-body">If you know what licence and activities you need, you can continue with this calculator.</p>
 
+        {% if feeSession2.length > 0 %}
 
+        <h2 class="govuk-heading-m">You've got saved selections</h2>
+       <p class="govuk-body">You can view your summary or clear your selections and start a new calculation.</p>
+         <a href="/fees/option4/summary"
+        class="govuk-button">View summary</a>
+        <a href="/fees/screens/clear" class="govuk-button govuk-button--warning">Start again</a>      
+       </div>
 
+        {% else %}
+        <h2 class="govuk-heading-m">New licence fee calculation</h2>
+           <a href="/fees/screens/non-remote" class="govuk-button">Start a new calculation</a>
+        {%endif%}
+     
 
     </div>
 

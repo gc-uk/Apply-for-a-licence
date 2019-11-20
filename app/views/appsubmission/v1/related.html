@@ -1,0 +1,104 @@
+{% extends "layout-app-authenticated.html" %}
+
+{% block pageTitle %}
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<div class=" govuk-width-container">
+    <div class="navigation-service">
+        <div class="navigation-service-name">Big Casino Limited / OL-123456</div>
+        <div class="navigation-service-switch">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+        <nav class="gc-vertical-nav">
+            <ul class="gc-vertical-nav__section">
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Application
+                        hub</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                </li>
+                <li class="gc-vertical-nav__section-item  ">
+                    <a class="gc-vertical-nav__link " href="/appsubmission/v1/progress-with-docs">Application
+                        progress</a>
+                </li>
+                <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                    <span class="gc-vertical-nav--count">3</span>
+                    <a class="gc-vertical-nav__link " href="#">Related applications</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="/appsubmission/v1/related">Additional
+                        information</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="/contributor/v1/index-with-vertical">Contributors</a>
+                </li>
+                <li class="gc-vertical-nav__section-item ">
+                    <a class="gc-vertical-nav__link " href="#">Print application</a>
+                </li>
+                <li class="gc-vertical-nav__section-item">
+                    <a class="gc-vertical-nav__link " href="#">Withdraw application</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">Related applications</h1>
+
+        <p class="govuk-body">The following applications were created in addition to your operator licence application.
+        </p>
+
+        <table class="govuk-table">
+            <caption class="govuk-table__caption">
+                <h1 class="govuk-heading-m">Applications</h1>
+            </caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Applicant</th>
+                    <th scope="col" class="govuk-table__header">Type</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric">Status</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header"><a href="/appsubmission/v1/related-progress">Peter Parker</a></th>
+                        <td class="govuk-table__cell">Personal management</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">Not submitted</td>
+                    </tr>
+    
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header"><a href="/appsubmission/v1/related-progress">Harvey Dent</a></th>
+                        <td class="govuk-table__cell">Personal management</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">Processing</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header"><a href="/appsubmission/v1/related-progress">Edward Nygma</a></th>
+                        <td class="govuk-table__cell">Personal management</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">Information needed</td>
+                    </tr>
+                </tbody>
+        </table>
+
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}
