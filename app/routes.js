@@ -6,6 +6,7 @@ var ggyController = require('./controllers/ggycalculatorController.js')
 var feesController = require('./controllers/feesController.js')
 var idverificationController = require('./controllers/idverificationController.js')
 var apphubccontroller = require('./controllers/apphubcontroller.js')
+var applicationController = require('./controllers/applicationController.js')
 
 // GGY Calculator
 router.get('/ggy-calculator/calculator', ggyController.calculator_get);
@@ -65,5 +66,27 @@ router.get('/appstart-v2/activity', apphubccontroller.appstart_v2_activity);
 router.get('/appstart-v2/need', apphubccontroller.appstart_v2_need);
 router.get('/appstart-v2/updates', apphubccontroller.appstart_v2_updates);
 router.get('/appstart-v2/start', apphubccontroller.appstart_v2_start);
+
+
+
+// APPLICATION
+router.get('/app/v1/security/signin', applicationController.security_signin_get);
+router.post('/app/v1/security/signin', applicationController.security_signin_post);
+
+router.get('/app/v1/security/create-account', applicationController.security_createaccount_get);
+router.post('/app/v1/security/create-account', applicationController.security_createaccount_post);
+
+router.get('/app/v1/security/code', applicationController.security_code_get);
+router.post('/app/v1/security/code', applicationController.security_code_post);
+
+router.get('/app/v1/security/forgot-password', applicationController.security_forgotpassword_get);
+router.post('/app/v1/security/forgot-password', applicationController.security_forgotpassword_post);
+
+router.get('/app/v1/account/name-password', applicationController.account_namepassword_get);
+router.post('/app/v1/account/name-password', applicationController.account_namepassword_post);
+
+router.get('/app/v1/security/set-password', applicationController.security_setpassword_get);
+router.post('/app/v1/security/set-password', applicationController.security_setpassword_post);
+
 
 module.exports = router

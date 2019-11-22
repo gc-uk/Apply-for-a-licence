@@ -1,6 +1,6 @@
 {% extends "layout-app-anon.html" %}
 
-{% block pageTitle %}
+{% block pageTitle %}Enter the code to confirm your email address
 {% endblock %}
 
 {% block heroClass %}
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="/app/security/create-account" class="govuk-back-link">Back</a>
+<a href="/app/v1/security/create-account" class="govuk-back-link">Back</a>
 {% endblock %}
 
 
@@ -20,14 +20,14 @@
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Enter the code to confirm your email address</h1>
 
-        <p class="govuk-body">We've sent a code to {{data['email']}}</p>
+        <p class="govuk-body">We've sent a code to <span class="govuk-!-font-weight-bold">someone@example.com</span></p>
 
         <div class="govuk-inset-text">
             If you use a browser to access your email, you may need to open a new window or tab to see the code.
         </div>
 
 
-        <form>
+        <form method="POST">
 
 
             <div class="govuk-form-group">
@@ -41,7 +41,7 @@
             <details class="govuk-details" data-module="govuk-details">
                 <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text">
-                        I've not received a code
+                        I've not received a code 
                     </span>
                 </summary>
                 <div class="govuk-details__text">
@@ -49,8 +49,8 @@
                         is 'Confirm your email address - Apply for a licence'.</p>
 
                     <p class="govuk-body">If you still haven't got the email, check your spam or junk folder. If it's
-                        not there you can <a href="/app/security/create-account">request a new code</a> or <a
-                            href="/app/security/create-account">provide another email address</a>.</p>
+                        not there you can <a href="/app/v1/security/create-account">request a new code</a> or <a
+                            href="/app/v1/security/create-account">provide another email address</a>.</p>
                 </div>
             </details>
 

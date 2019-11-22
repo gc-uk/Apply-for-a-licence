@@ -169,6 +169,9 @@
   top: 0;
   right: 0;
   padding: 14px 0 11px 15px;
+  max-width: 50%;  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .navigation-service-switch {

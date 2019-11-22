@@ -1,0 +1,37 @@
+{% extends "layout-app-anon.html" %}
+
+{% block pageTitle %}Check your email
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/app/v1/security/signin" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="gc-notification gc-notification--success">
+            <h1 class="govuk-heading-l">Check your email</h1>
+            <p class="govuk-body">If we found an account for the email address entered, we'll send you a link to set a new password.</p>
+
+            <p class="govuk-body">The link is valid for 24 hours, if you don't use it in this time, you'll need to follow the forgot password process again.</p>
+        </div>
+
+        <h2 class="govuk-heading-m">Next steps</h2>
+
+        <p class="govuk-body">Return to the <a href="/app/v1/security/signin">sign in</a> page.</p>
+
+    </div>
+</div>
+
+
+{% endblock %}

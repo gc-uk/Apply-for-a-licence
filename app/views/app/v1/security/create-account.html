@@ -1,6 +1,6 @@
 {% extends "layout-app-anon.html" %}
 
-{% block pageTitle %}
+{% block pageTitle %}Create an account
 {% endblock %}
 
 {% block heroClass %}
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="/app/security/signin" class="govuk-back-link">Back</a>
+<a href="/app/v1/security/signin" class="govuk-back-link">Back</a>
 {% endblock %}
 
 
@@ -18,11 +18,14 @@
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Reset your password</h1>
+        <h1 class="govuk-heading-l">Create an account</h1>
 
-        <p class="govuk-body">Enter your email address and we'll send you a password reset link.</p>
-     
-        <form>
+        <p class="govuk-body">To confirm this is your email address, we'll send you a code.</p>
+
+        <p class="govuk-body">You'll need to confirm this code in the next step to continue.</p>
+        <form method="post">
+
+
             <div class="govuk-form-group">
                 <label class="govuk-label" for="email">
                     Email address
@@ -30,14 +33,14 @@
                 <input class="govuk-input govuk-!-width-two-thirds" id="email" name="email" type="text">
             </div>
 
-            <button class="govuk-button" data-module="govuk-button">
-                   Reset password
-                  </button>
-        
+
+
+            <button class="govuk-button" data-module="govuk-button" type="submit">
+                Continue
+            </button>
         </form>
 
-      
-
+    
     </div>
 </div>
 

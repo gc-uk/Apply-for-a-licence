@@ -1,0 +1,32 @@
+{% extends "layout-app-anon.html" %}
+
+{% block pageTitle %}That link is no longer valid
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">That link is no longer valid</h1>
+
+        <p class="govuk-body">The link you've clicked is no longer valid. If you're trying to set a new password, try
+            doing this again.</p>
+        <p class="govuk-body">
+            <a class="govuk-button" role="button" href="/app/v1/security/forgot-password">
+                Forgot password
+            </a></p>
+
+
+
+    </div>
+</div>
+
+
+{% endblock %}

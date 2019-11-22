@@ -8,8 +8,7 @@
 
 {% block heroContent %}
 <div class=" govuk-width-container">
-    <div class="navigation-service">
-        <div class="navigation-service-name">Application hub</div>
+    <div class="navigation-service"> <div class="navigation-service-name">Application hub</div>
         <div class="navigation-service-switch">
             <a href="#" class="govuk-button" role="button">New application</a>
         </div>
@@ -33,7 +32,7 @@
                 <li class="gc-vertical-nav__section-item">
                     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
                 </li>
-                <li class="gc-vertical-nav__section-item ">
+                <li class="gc-vertical-nav__section-item  gc-vertical-nav__section-item--current">
                     <span class="gc-vertical-nav--count">0</span>
                     <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps">In progress</a>
                 </li>
@@ -41,11 +40,11 @@
                     <span class="gc-vertical-nav--count">0</span>
                     <a class="gc-vertical-nav__link " href="/applicationhub/v2/hub-with-apps-submitted">Submitted</a>
                 </li>
-                <li class="gc-vertical-nav__section-item ">
+                <!-- <li class="gc-vertical-nav__section-item ">
                     <span class="gc-vertical-nav--count">0</span>
                     <a class="gc-vertical-nav__link "
                         href="/applicationhub/v2/hub-with-apps-contributor">Contributor</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </div>
@@ -53,9 +52,11 @@
 
     <div class="govuk-grid-column-three-quarters">
 
-        <h1 class="govuk-heading-l">You don't have any applications</h1>
+       
+            <h1 class="govuk-heading-l">In progress applications</h1>
 
-        <p class="govuk-body">Use the new application button to start an application for a licence.</p>
+            <p class="govuk-body">You don't have any in-progress applications.</p>
+            <p class="govuk-body">You can start a <a href="">new application</a>.</p>
 
 
     </div>
@@ -66,4 +67,15 @@
 
 
 
+{% endblock %}
+
+{% block pageHelp %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">What this page is for</h3>
+        <p class="govuk-body">This page displays applications that have been started but not yet paid and submitted. Clicking on the applicant name will take the user to the outstanding tasks for the application.</p>
+        <h3 class="govuk-heading-m">Known issues</h3>
+        <p class="govuk-body">There are no known issues for this page.</p>
+    </div>
+</div>
 {% endblock %}
